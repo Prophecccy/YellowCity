@@ -89,7 +89,7 @@ const LocationGrid: React.FC = () => {
                 }}
               >
                 <span>Zone 0{idx + 1}</span>
-                <span style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>Sector {loc.code}</span>
+                <span style={{ color: 'var(--brand-blue)', fontWeight: 'bold' }}>Sector {loc.code}</span>
               </div>
 
               {/* Location Name */}

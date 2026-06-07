@@ -15,6 +15,11 @@
   /* Saturated Brand Yellow */
   --brand-yellow: hsl(48, 100%, 50%);  
   --brand-yellow-glow: hsla(48, 100%, 50%, 0.25);
+
+  /* Exact Logo-Matching Corporate Brand Blue */
+  --brand-blue: #10377c;
+  --brand-blue-glow: rgba(16, 55, 124, 0.15);
+
   
   /* Layout Lines - Drawing Grids */
   --grid-line: hsla(224, 60%, 10%, 0.08);
@@ -169,7 +174,7 @@ a {
 }
 
 .blob-blue {
-  background: radial-gradient(circle, hsl(210, 100%, 75%) 0%, transparent 70%);
+  background: radial-gradient(circle, hsl(218, 100%, 80%) 0%, transparent 70%);
   width: 700px;
   height: 700px;
   bottom: -15%;

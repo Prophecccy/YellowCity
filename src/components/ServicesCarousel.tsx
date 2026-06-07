@@ -378,7 +378,7 @@ const ServicesCarousel: React.FC = () => {
                           gap: '10px'
                         }}
                       >
-                        <span style={{ color: 'var(--brand-yellow)', fontWeight: 'bold' }}>↳</span> {bullet}
+                        <span style={{ color: 'var(--brand-blue)', fontWeight: 'bold' }}>↳</span> {bullet}
                       </li>
                     ))}
                   </ul>

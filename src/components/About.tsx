@@ -62,7 +62,7 @@ const About: React.FC = () => {
               </div>
 
               {/* Pillar 2 */}
-              <div style={{ borderLeft: '3px solid var(--brand-yellow)', paddingLeft: '1rem' }}>
+              <div style={{ borderLeft: '3px solid var(--brand-blue)', paddingLeft: '1rem' }}>
                 <div style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>02. Statutory Compliance</div>
                 <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
                   Strict adherence to PF, ESI, and government labor standards.

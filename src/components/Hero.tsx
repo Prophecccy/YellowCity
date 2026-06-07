@@ -102,9 +102,9 @@ const Hero = () => {
                 style={{ 
                   width: '6px', 
                   height: '6px', 
-                  backgroundColor: 'var(--brand-yellow)', 
+                  backgroundColor: 'var(--brand-blue)', 
                   borderRadius: '50%',
-                  boxShadow: '0 0 8px var(--brand-yellow)'
+                  boxShadow: '0 0 8px var(--brand-blue-glow)'
                 }} 
               />
               <span className="font-technical" style={{ fontWeight: 600 }}>Premium Facility & Security Services</span>
@@ -220,7 +220,7 @@ const Hero = () => {
             <div>
               <div className="font-technical">03.</div>
               <div style={{ fontSize: '1.8rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.25rem' }}>
-                24<span style={{ color: 'var(--brand-yellow)' }}>/</span>7
+                24<span style={{ color: 'var(--brand-blue)' }}>/</span>7
               </div>
               <div className="font-technical" style={{ fontSize: '0.65rem' }}>EMERGENCY_DISPATCH</div>
             </div>

@@ -349,8 +349,8 @@ const ContactForm: React.FC = () => {
           width: 100%;
         }
         .draft-input:focus, .draft-textarea:focus, .draft-select:focus {
-          border-color: var(--text-primary);
-          box-shadow: 0 0 10px var(--brand-yellow-glow);
+          border-color: var(--brand-blue);
+          box-shadow: 0 0 10px var(--brand-blue-glow);
           background-color: #ffffff;
         }
         .draft-select option {

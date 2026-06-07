@@ -9,7 +9,7 @@ export const SecurityVisual: React.FC = () => {
       <svg width="240" height="240" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Concentric radar rings */}
         <circle cx="50" cy="50" r="45" stroke="var(--grid-line)" strokeWidth="1" />
-        <circle cx="50" cy="50" r="30" stroke="var(--grid-line)" strokeWidth="0.75" />
+        <circle cx="50" cy="50" r="30" stroke="var(--brand-blue)" strokeWidth="0.75" opacity="0.35" />
         <circle cx="50" cy="50" r="15" stroke="var(--grid-line)" strokeWidth="0.5" />
         
         {/* Radar crosshairs */}
@@ -69,7 +69,7 @@ export const HousekeepingVisual: React.FC = () => {
         {/* Small floating stars */}
         <path 
           d="M28 28 C28 33, 23 38, 18 38 C23 38, 28 38, 28 48 C28 38, 33 38, 38 38 C33 38, 28 33, 28 28 Z" 
-          fill="var(--text-primary)" 
+          fill="var(--brand-blue)" 
           style={{ transformOrigin: '28px 38px', animation: 'sparkle-float 3s ease-in-out infinite 0.2s' }} 
         />
         <path 
@@ -107,7 +107,7 @@ export const CleaningVisual: React.FC = () => {
         
         {/* Background shield/shape */}
         <circle cx="50" cy="50" r="40" stroke="var(--grid-line)" strokeWidth="1" />
-        <path d="M50 10 L82 22 V55 C82 72, 68 83, 50 88 C32 83, 18 72, 18 55 V22 Z" fill="var(--bg-panel)" stroke="var(--text-primary)" strokeWidth="2" />
+        <path d="M50 10 L82 22 V55 C82 72, 68 83, 50 88 C32 83, 18 72, 18 55 V22 Z" fill="var(--bg-panel)" stroke="var(--brand-blue)" strokeWidth="2" />
         
         {/* Cleaning shine line sweeping horizontally */}
         <g mask="url(#wipeMask)">
@@ -167,8 +167,8 @@ export const DetectiveVisual: React.FC = () => {
         
         {/* Pulsing Target Reticle */}
         <g style={{ animation: 'target-pulse 2s infinite' }}>
-          <circle cx="50" cy="50" r="18" stroke="var(--text-primary)" strokeWidth="1.5" strokeDasharray="6 4" />
-          <path d="M50 26 V32 M50 68 V74 M26 50 H32 M68 50 H74" stroke="var(--text-primary)" strokeWidth="1.5" />
+          <circle cx="50" cy="50" r="18" stroke="var(--brand-blue)" strokeWidth="1.5" strokeDasharray="6 4" />
+          <path d="M50 26 V32 M50 68 V74 M26 50 H32 M68 50 H74" stroke="var(--brand-blue)" strokeWidth="1.5" />
         </g>
         
         {/* Inner core lock coordinates */}
