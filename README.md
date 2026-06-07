@@ -21,7 +21,7 @@ A high-fidelity, vibrant, and interactive web application designed for **Yellow 
 * **Canvas Background**: Warm off-white/cream (`#fcfcf9` / `hsl(45, 18%, 98%)`)
 * **Primary Text & Panels**: Deep corporate steel/navy (`#0a1128` / `hsl(224, 60%, 10%)`)
 * **Vibrant Brand Accent**: Saturated safety yellow (`#FFD200` / `hsl(49, 100%, 50%)`)
-* **Logo Brand Blue Accent**: Exact logo-matching corporate brand blue (`#10377c` / `hsl(218, 77%, 27%)`) used for highlights, custom SVG indicators, card markers, and active input focus halos.
+* **Logo Brand Blue Accent**: Exact logo-matching corporate brand blue (`#10377c` / `hsl(218, 77%, 27%)`) used for highlights, custom SVG indicators, card markers, active input focus halos, and structural decorative strips under section tags.
 * **Interactive Layering**: Drifting background gradient blobs and an animated tactile noise overlay for a premium film-grain paper feel.
 
 ---
