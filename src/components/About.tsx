@@ -22,7 +22,7 @@ const About: React.FC = () => {
         >
           {/* Left Side: Editorial Narrative */}
           <div className="about-narrative-col" style={{ position: 'relative', zIndex: 2 }}>
-            <div className="font-technical" style={{ marginBottom: '0.5rem' }}>[OPERATIONAL_CORE]</div>
+            <div className="font-technical" style={{ marginBottom: '0.5rem' }}>Our Operational Core</div>
             <h2 style={{ fontSize: 'var(--font-size-section)', color: 'var(--text-primary)', marginBottom: '2rem' }}>
               BUILT WITH <br/>
               UNCOMPROMISING <br/>
@@ -55,7 +55,7 @@ const About: React.FC = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem', fontFamily: 'var(--font-mono)', fontSize: '0.85rem' }}>
               {/* Pillar 1 */}
               <div style={{ borderLeft: '3px solid var(--brand-yellow)', paddingLeft: '1rem' }}>
-                <div style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>01 // 100% POLICE VERIFIED</div>
+                <div style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>01. 100% Police Verified</div>
                 <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
                   Rigorous background and criminal record checks.
                 </div>
@@ -63,7 +63,7 @@ const About: React.FC = () => {
 
               {/* Pillar 2 */}
               <div style={{ borderLeft: '3px solid var(--brand-yellow)', paddingLeft: '1rem' }}>
-                <div style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>02 // STATUTORY COMPLIANCE</div>
+                <div style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>02. Statutory Compliance</div>
                 <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
                   Strict adherence to PF, ESI, and government labor standards.
                 </div>
@@ -71,7 +71,7 @@ const About: React.FC = () => {
 
               {/* Pillar 3 */}
               <div style={{ borderLeft: '3px solid var(--brand-yellow)', paddingLeft: '1rem' }}>
-                <div style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>03 // 24/7 COMMAND DESK</div>
+                <div style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>03. 24/7 Command Desk</div>
                 <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
                   Continuous dispatch support and active location tracking.
                 </div>
@@ -113,7 +113,7 @@ const About: React.FC = () => {
                   pointerEvents: 'none'
                 }}
               >
-                // SECURE_VERIFIED
+                Secure & Verified
               </div>
             </div>
           </div>

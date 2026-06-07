@@ -11,12 +11,12 @@ interface LocationInfo {
 
 const LocationGrid: React.FC = () => {
   const locations: LocationInfo[] = [
-    { name: 'Coimbatore', code: 'CBE-W1', latLong: '11.0152° N, 76.9558° E', office: 'Regional HQ, Race Course', spec: 'FACILITY_HUB_01' },
-    { name: 'Salem', code: 'SLM-N2', latLong: '11.6643° N, 78.1460° E', office: 'Branch Ops, Meyyanur', spec: 'SEC_DISPATCH_02' },
-    { name: 'Erode', code: 'ERD-C0', latLong: '11.3410° N, 77.7172° E', office: 'Corporate HQ, Perundurai Rd', spec: 'HQ_CORE_STATION' },
-    { name: 'Tirupur', code: 'TPR-W3', latLong: '11.1085° N, 77.3411° E', office: 'Industrial Div, Avinashi Rd', spec: 'CLEAN_CORE_03' },
-    { name: 'Karur', code: 'KRR-S4', latLong: '10.9601° N, 78.0766° E', office: 'Logistics Hub, Kovai Rd', spec: 'FACILITY_DIV_04' },
-    { name: 'Namakkal', code: 'NMK-E5', latLong: '11.2189° N, 78.1673° E', office: 'Transit Post, Salem Rd', spec: 'SEC_STATION_05' },
+    { name: 'Coimbatore', code: 'CBE-W1', latLong: '11.0152° N, 76.9558° E', office: 'Regional HQ, Race Course', spec: 'Coimbatore Hub' },
+    { name: 'Salem', code: 'SLM-N2', latLong: '11.6643° N, 78.1460° E', office: 'Branch Ops, Meyyanur', spec: 'Salem Dispatch' },
+    { name: 'Erode', code: 'ERD-C0', latLong: '11.3410° N, 77.7172° E', office: 'Corporate HQ, Perundurai Rd', spec: 'Core Operations HQ' },
+    { name: 'Tirupur', code: 'TPR-W3', latLong: '11.1085° N, 77.3411° E', office: 'Industrial Div, Avinashi Rd', spec: 'Tirupur Cleaning Depot' },
+    { name: 'Karur', code: 'KRR-S4', latLong: '10.9601° N, 78.0766° E', office: 'Logistics Hub, Kovai Rd', spec: 'Karur Branch' },
+    { name: 'Namakkal', code: 'NMK-E5', latLong: '11.2189° N, 78.1673° E', office: 'Transit Post, Salem Rd', spec: 'Namakkal Station' },
   ];
 
   return (
@@ -45,7 +45,7 @@ const LocationGrid: React.FC = () => {
           }}
         >
           <div>
-            <div className="font-technical" style={{ marginBottom: '0.5rem', color: 'var(--text-muted)' }}>[GEOGRAPHIC_INDEX]</div>
+            <div className="font-technical" style={{ marginBottom: '0.5rem', color: 'var(--text-muted)' }}>Our Locations</div>
             <h2 style={{ fontSize: 'var(--font-size-section)', color: 'var(--text-primary)' }}>
               OPERATING <span className="font-serif-italic" style={{ color: 'var(--brand-yellow)', textShadow: '0 2px 10px rgba(255,210,0,0.1)' }}>sectors</span>
             </h2>
@@ -88,8 +88,8 @@ const LocationGrid: React.FC = () => {
                   color: 'var(--text-muted)'
                 }}
               >
-                <span>[ZONE_0{idx + 1}]</span>
-                <span style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>//{loc.code}</span>
+                <span>Zone 0{idx + 1}</span>
+                <span style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>Sector {loc.code}</span>
               </div>
 
               {/* Location Name */}
@@ -119,13 +119,13 @@ const LocationGrid: React.FC = () => {
                 }}
               >
                 <div>
-                  <span style={{ color: 'var(--text-primary)' }}>COORD:</span> {loc.latLong}
+                  <span style={{ color: 'var(--text-primary)' }}>Coordinates:</span> {loc.latLong}
                 </div>
                 <div>
-                  <span style={{ color: 'var(--text-primary)' }}>OFFICE:</span> {loc.office}
+                  <span style={{ color: 'var(--text-primary)' }}>Branch Office:</span> {loc.office}
                 </div>
                 <div>
-                  <span style={{ color: 'var(--text-primary)' }}>SPEC:</span> {loc.spec}
+                  <span style={{ color: 'var(--text-primary)' }}>Service Code:</span> {loc.spec}
                 </div>
               </div>
             </motion.div>

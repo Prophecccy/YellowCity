@@ -126,14 +126,14 @@ const ContactForm: React.FC = () => {
         >
           {/* Form Left Side Narrative details */}
           <div className="contact-narrative-col" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <div className="font-technical">[INITIATE_CONTACT]</div>
+            <div className="font-technical">Get in Touch</div>
             <h2 style={{ fontSize: 'var(--font-size-section)', color: 'var(--text-primary)' }}>
-              SYNC WITH <br/>
+              CONNECT WITH <br/>
               OUR SERVICE <br/>
-              <span className="font-serif-italic" style={{ color: 'var(--brand-yellow)', textShadow: '0 2px 10px rgba(255,210,0,0.1)' }}>matrix.</span>
+              <span className="font-serif-italic" style={{ color: 'var(--brand-yellow)', textShadow: '0 2px 10px rgba(255,210,0,0.1)' }}>team.</span>
             </h2>
             <p>
-              Fill out the parameters on the right to sync your operational objectives with our service matrix. Our dispatch coordinator will reply with a detailed resource planning document within 12 hours.
+              Fill out the form below to outline your requirements. Our local coordinator will reply with a detailed resource and service proposal within 12 hours.
             </p>
             
             {/* Drawing details card */}
@@ -143,17 +143,15 @@ const ContactForm: React.FC = () => {
                 border: '1px solid var(--grid-line)',
                 padding: '2rem',
                 backgroundColor: 'var(--bg-panel)',
-                fontFamily: 'var(--font-mono)',
-                fontSize: '0.8rem',
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.9rem',
                 color: 'var(--text-muted)',
                 position: 'relative'
               }}
             >
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <div>// COMMUNICATIONS_LOG</div>
-                <div>STATE: STANDBY [AWAITING_INPUT]</div>
-                <div>SECURE: TLS_1.3_ENCRYPTED</div>
-                <div>ENDPOINT: web3forms.com</div>
+                <strong style={{ color: 'var(--text-primary)' }}>Confidential & Rapid Response</strong>
+                <div>Our average response time for new service proposals is under 12 hours. All communications are confidential and processed by regional operations heads.</div>
               </div>
             </div>
           </div>
@@ -169,8 +167,8 @@ const ContactForm: React.FC = () => {
             className="premium-form-card"
           >
             <div className="font-technical" style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'space-between' }}>
-              <span>[FORM_PARAMS_INPUT]</span>
-              <span style={{ color: 'var(--text-muted)' }}>* REQUIRED</span>
+              <span>Service Request Form</span>
+              <span style={{ color: 'var(--text-muted)' }}>* required</span>
             </div>
 
             <AnimatePresence mode="wait">
@@ -208,7 +206,7 @@ const ContactForm: React.FC = () => {
                 >
                   {/* Name field */}
                   <div className="input-group">
-                    <label className="input-label">CLIENT_NAME *</label>
+                    <label className="input-label">Your Name *</label>
                     <input 
                       type="text" 
                       name="name" 
@@ -223,7 +221,7 @@ const ContactForm: React.FC = () => {
                   {/* Phone & Email Fields Side by Side */}
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
                     <div className="input-group">
-                      <label className="input-label">CONTACT_TEL *</label>
+                      <label className="input-label">Phone Number *</label>
                       <input 
                         type="tel" 
                         name="phone" 
@@ -235,7 +233,7 @@ const ContactForm: React.FC = () => {
                       />
                     </div>
                     <div className="input-group">
-                      <label className="input-label">EMAIL_ADDRESS *</label>
+                      <label className="input-label">Email Address *</label>
                       <input 
                         type="email" 
                         name="email" 
@@ -251,7 +249,7 @@ const ContactForm: React.FC = () => {
                   {/* Dropdowns Side by Side */}
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
                     <div className="input-group">
-                      <label className="input-label">SERVICE_MATRIX</label>
+                      <label className="input-label">Select Service</label>
                       <select 
                         name="service"
                         value={formData.service}
@@ -263,7 +261,7 @@ const ContactForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="input-group">
-                      <label className="input-label">OPERATING_SECTOR</label>
+                      <label className="input-label">Operating Location</label>
                       <select 
                         name="location"
                         value={formData.location}
@@ -278,13 +276,13 @@ const ContactForm: React.FC = () => {
 
                   {/* Message details */}
                   <div className="input-group">
-                    <label className="input-label">OPERATIONAL_REQUIREMENT_DETAILS *</label>
+                    <label className="input-label">Operational Requirements *</label>
                     <textarea 
                       name="message" 
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={4}
-                      placeholder="Outline your security deployment schedule, housekeeping size, deep cleaning scale or surveillance task parameters..."
+                      placeholder="Outline your security schedule, housekeeping size, cleaning scale, or specific investigation requirements..."
                       className="draft-textarea"
                       disabled={formStatus === 'submitting'}
                     />
@@ -293,13 +291,13 @@ const ContactForm: React.FC = () => {
                   {/* Errors display */}
                   {validationError && (
                     <div className="error-alert">
-                      [VAL_ERROR] {validationError}
+                      Error: {validationError}
                     </div>
                   )}
 
                   {formStatus === 'error' && (
                     <div className="error-alert">
-                      [API_ERROR] Server submission failed. Please try again or call corporate desk directly.
+                      Error: Server submission failed. Please try again or call our corporate desk directly.
                     </div>
                   )}
 
@@ -310,8 +308,7 @@ const ContactForm: React.FC = () => {
                     style={{ alignSelf: 'flex-start', marginTop: '1rem', width: '100%', justifyContent: 'center' }}
                     disabled={formStatus === 'submitting'}
                   >
-                    <span>{formStatus === 'submitting' ? 'LOGGING...' : 'TRANSMIT PARAMETERS'}</span>
-                    <span className="font-technical">[0.04]</span>
+                    <span>{formStatus === 'submitting' ? 'Submitting...' : 'Submit Request'}</span>
                   </button>
                 </motion.form>
               )}

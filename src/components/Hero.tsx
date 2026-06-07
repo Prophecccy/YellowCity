@@ -107,7 +107,7 @@ const Hero = () => {
                   boxShadow: '0 0 8px var(--brand-yellow)'
                 }} 
               />
-              <span className="font-technical" style={{ fontWeight: 600 }}>[FACILITY_MANAGEMENT_SOLUTIONS]</span>
+              <span className="font-technical" style={{ fontWeight: 600 }}>Premium Facility & Security Services</span>
             </div>
 
             {/* Split Text Mask Title */}
@@ -182,11 +182,9 @@ const Hero = () => {
             >
               <a href="#services" className="btn-draft btn-draft-accent">
                 <span>Explore Services</span>
-                <span className="font-technical" style={{ fontSize: '0.65rem', color: 'var(--text-primary)' }}>[0.02]</span>
               </a>
               <a href="#contact" className="btn-draft">
                 <span>Request Callback</span>
-                <span className="font-technical" style={{ fontSize: '0.65rem' }}>[0.03]</span>
               </a>
             </motion.div>
           </motion.div>
@@ -206,21 +204,21 @@ const Hero = () => {
         >
           <div className="hero-metrics-grid">
             <div>
-              <div className="font-technical">[METRIC_01]</div>
+              <div className="font-technical">01.</div>
               <div style={{ fontSize: '1.8rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.25rem' }}>
                 98.4<span style={{ color: 'var(--brand-yellow)' }}>%</span>
               </div>
               <div className="font-technical" style={{ fontSize: '0.65rem' }}>CLIENT_RETENTION</div>
             </div>
             <div>
-              <div className="font-technical">[METRIC_02]</div>
+              <div className="font-technical">02.</div>
               <div style={{ fontSize: '1.8rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.25rem' }}>
                 500<span style={{ color: 'var(--brand-yellow)' }}>+</span>
               </div>
               <div className="font-technical" style={{ fontSize: '0.65rem' }}>VERIFIED_STAFF_UNITS</div>
             </div>
             <div>
-              <div className="font-technical">[METRIC_03]</div>
+              <div className="font-technical">03.</div>
               <div style={{ fontSize: '1.8rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.25rem' }}>
                 24<span style={{ color: 'var(--brand-yellow)' }}>/</span>7
               </div>
@@ -229,9 +227,9 @@ const Hero = () => {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-            <div>[SYS_STATUS: ACTIVE]</div>
+            <div>24/7 Support Active</div>
             <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--text-primary)' }} />
-            <div>[TAMIL NADU, IN]</div>
+            <div>Tamil Nadu, India</div>
           </div>
         </div>
       </div>

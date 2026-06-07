@@ -134,7 +134,6 @@ const Header: React.FC = () => {
         >
           <a href="#contact" className="btn-draft btn-draft-accent">
             <span>Get Quote</span>
-            <span className="font-technical" style={{ fontSize: '0.65rem', color: 'var(--text-primary)' }}>[0.01]</span>
           </a>
         </div>
 
@@ -234,7 +233,7 @@ const Header: React.FC = () => {
                 zIndex: 2
               }}
             >
-              <div className="font-technical" style={{ marginBottom: '-1rem' }}>[NAVIGATION_MENU]</div>
+              <div className="font-technical" style={{ marginBottom: '-1rem' }}>Menu</div>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 {navLinks.map((link, idx) => (
                   <motion.li 

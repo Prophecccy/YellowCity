@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
                 YELLOW CITY
               </span>
               <span className="font-technical" style={{ fontSize: '0.65rem', color: 'var(--brand-yellow)', border: '1px solid var(--brand-yellow)', padding: '2px 6px' }}>
-                [EST_2026]
+                Est. 2026
               </span>
             </div>
             <p style={{ fontSize: '0.95rem', maxWidth: '340px', color: 'rgba(255, 255, 255, 0.7)' }}>
@@ -54,26 +54,26 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <span className="font-technical" style={{ color: 'var(--brand-yellow)' }}>[QUICK_INDEX]</span>
+            <span className="font-technical" style={{ color: 'var(--brand-yellow)' }}>Quick Links</span>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontFamily: 'var(--font-mono)', fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)' }}>
               <li>
                 <a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand-yellow)'} onMouseLeave={e => e.currentTarget.style.color = 'inherit'}>
-                  // SERVICES_SLIDES
+                  Services
                 </a>
               </li>
               <li>
                 <a href="#locations" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand-yellow)'} onMouseLeave={e => e.currentTarget.style.color = 'inherit'}>
-                  // GEOGRAPHIC_REACH
+                  Our Locations
                 </a>
               </li>
               <li>
                 <a href="#about" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand-yellow)'} onMouseLeave={e => e.currentTarget.style.color = 'inherit'}>
-                  // BRAND_BLUEPRINT
+                  About Us
                 </a>
               </li>
               <li>
                 <a href="#contact" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand-yellow)'} onMouseLeave={e => e.currentTarget.style.color = 'inherit'}>
-                  // INITIATE_CONTACT
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
 
           {/* Contact Details */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <span className="font-technical" style={{ color: 'var(--brand-yellow)' }}>[CONTACT_COORDINATES]</span>
+            <span className="font-technical" style={{ color: 'var(--brand-yellow)' }}>Contact Info</span>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontFamily: 'var(--font-mono)', fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.7)' }}>
               <div>
                 <span style={{ color: '#ffffff', fontWeight: 'bold' }}>TEL:</span> +91 94435 52222
@@ -115,10 +115,6 @@ const Footer: React.FC = () => {
         >
           <div>
             &copy; {new Date().getFullYear()} YELLOW CITY PVT LTD. ALL RIGHTS RESERVED.
-          </div>
-          <div style={{ display: 'flex', gap: '2rem' }} className="footer-status-row">
-            <span>[STATUS: SECURE_ENVIRONMENT]</span>
-            <span style={{ color: 'var(--brand-yellow)' }}>[SYS_INTEGRATED: OK]</span>
           </div>
         </div>
       </div>

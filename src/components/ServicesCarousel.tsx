@@ -27,7 +27,7 @@ const ServicesCarousel: React.FC = () => {
       num: '01',
       title: 'Security Services',
       description: 'High-fidelity armed guarding, static security deployments, event protection, access control protocols, and executive transit intelligence. Built on compliance and rapid response command centers.',
-      specs: '[UNIT: SEC_OPS // SERVICES_ACTIVE]',
+      specs: 'Security Division',
       bullets: [
         'Tactical physical defense & armed units',
         '24/7 command room route-tracking dispatch',
@@ -39,7 +39,7 @@ const ServicesCarousel: React.FC = () => {
       num: '02',
       title: 'Housekeeping Services',
       description: 'Handcrafted corporate facility hospitality, workspace housekeeping, pantry hostess staff management, guest house operational coordination, and corporate concierge units.',
-      specs: '[UNIT: HK_OPS // STANDARDS: premium_5S]',
+      specs: 'Premium Housekeeping',
       bullets: [
         'Corporate workspace management & setups',
         'Professional pantry hostess & stewards styling',
@@ -51,7 +51,7 @@ const ServicesCarousel: React.FC = () => {
       num: '03',
       title: 'Cleaning Services',
       description: 'Industrial-grade deep sanitization, high-rise facade window restoration, carpet/upholstery crystallization, marble diamond polishing, and technical clean room maintenance.',
-      specs: '[UNIT: CLEAN_OPS // BIO_HAZARD: GREEN_REF]',
+      specs: 'Sanitation & Deep Cleaning',
       bullets: [
         'Heavy industrial deep cleaning & restoration',
         'Marble crystallization & diamond pad buffing',
@@ -63,7 +63,7 @@ const ServicesCarousel: React.FC = () => {
       num: '04',
       title: 'Detective Agency',
       description: 'Elite corporate espionage prevention, background intelligence audits, asset tracing, matrimonial verification, active field surveillance, and fraud investigations.',
-      specs: '[UNIT: DET_INTEL // LICENSE: PRIVATE_SEC_ACT]',
+      specs: 'Private Investigations',
       bullets: [
         'Vendor audits & pre-employment tracing',
         'High-fidelity surveillance & photography logs',
@@ -201,7 +201,7 @@ const ServicesCarousel: React.FC = () => {
           }}
         >
           <div className="font-technical" style={{ marginBottom: '1.5rem', color: 'var(--text-primary)', fontWeight: 600 }}>
-            [SERVICES_MATRIX]
+            Our Services
           </div>
 
           <div 
@@ -263,8 +263,7 @@ const ServicesCarousel: React.FC = () => {
                       transition: 'color 0.3s'
                     }}
                   >
-                    <span>SYS_0{service.num}</span>
-                    <span style={{ fontSize: '0.65rem' }}>[{(progress / 100).toFixed(2)}]</span>
+                    <span>0{service.num}</span>
                   </div>
 
                   <span 
@@ -390,7 +389,6 @@ const ServicesCarousel: React.FC = () => {
                     style={{ alignSelf: 'flex-start', marginTop: '1.5rem', width: isMobile ? '100%' : 'auto', justifyContent: 'center' }}
                   >
                     <span>{isMobile ? 'Get Proposal' : 'Get Operational Proposal'}</span>
-                    <span className="font-technical" style={{ fontSize: '0.65rem', color: 'var(--text-primary)' }}>[0.02_{service.num}]</span>
                   </a>
                 </div>
 
