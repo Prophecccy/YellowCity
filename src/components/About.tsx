@@ -23,10 +23,11 @@ const About: React.FC = () => {
           {/* Left Side: Editorial Narrative */}
           <div className="about-narrative-col" style={{ position: 'relative', zIndex: 2 }}>
             <div className="font-technical" style={{ marginBottom: '0.5rem' }}>Our Operational Core</div>
+            <div style={{ width: '60px', height: '4px', backgroundColor: 'var(--brand-blue)', marginBottom: '1.5rem' }} />
             <h2 style={{ fontSize: 'var(--font-size-section)', color: 'var(--text-primary)', marginBottom: '2rem' }}>
               BUILT WITH <br/>
               UNCOMPROMISING <br/>
-              <span className="font-serif-italic" style={{ color: 'var(--brand-yellow)', textShadow: '0 2px 10px rgba(255,210,0,0.1)' }}>compliance.</span>
+              <span className="font-serif-italic" style={{ color: 'var(--brand-blue)', textShadow: '0 2px 10px var(--brand-blue-glow)' }}>compliance.</span>
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <p>

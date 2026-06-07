@@ -136,7 +136,7 @@ const Hero = () => {
                     lineHeight: '0.95'
                   }}
                 >
-                  <span className="font-serif-italic" style={{ color: 'var(--brand-yellow)', textShadow: '0 2px 10px rgba(255,210,0,0.15)' }}>pristine.</span>
+                  <span className="font-serif-italic" style={{ color: 'var(--brand-blue)', textShadow: '0 2px 10px var(--brand-blue-glow)' }}>pristine.</span>
                 </motion.h1>
               </div>
 
@@ -206,14 +206,14 @@ const Hero = () => {
             <div>
               <div className="font-technical">01.</div>
               <div style={{ fontSize: '1.8rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.25rem' }}>
-                98.4<span style={{ color: 'var(--brand-yellow)' }}>%</span>
+                98.4<span style={{ color: 'var(--brand-blue)' }}>%</span>
               </div>
               <div className="font-technical" style={{ fontSize: '0.65rem' }}>CLIENT_RETENTION</div>
             </div>
             <div>
               <div className="font-technical">02.</div>
               <div style={{ fontSize: '1.8rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.25rem' }}>
-                500<span style={{ color: 'var(--brand-yellow)' }}>+</span>
+                500<span style={{ color: 'var(--brand-blue)' }}>+</span>
               </div>
               <div className="font-technical" style={{ fontSize: '0.65rem' }}>VERIFIED_STAFF_UNITS</div>
             </div>

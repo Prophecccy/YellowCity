@@ -127,6 +127,7 @@ const ContactForm: React.FC = () => {
           {/* Form Left Side Narrative details */}
           <div className="contact-narrative-col" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div className="font-technical">Get in Touch</div>
+            <div style={{ width: '60px', height: '4px', backgroundColor: 'var(--brand-blue)', marginTop: '-0.75rem', marginBottom: '0.25rem' }} />
             <h2 style={{ fontSize: 'var(--font-size-section)', color: 'var(--text-primary)' }}>
               CONNECT WITH <br/>
               OUR SERVICE <br/>

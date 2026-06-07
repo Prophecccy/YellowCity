@@ -109,7 +109,7 @@ const Header: React.FC = () => {
                     position: 'relative'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--brand-yellow)';
+                    e.currentTarget.style.color = 'var(--brand-blue)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.color = 'var(--text-primary)';
@@ -255,7 +255,7 @@ const Header: React.FC = () => {
                         gap: '12px'
                       }}
                     >
-                      <span className="font-technical" style={{ fontSize: '0.8rem', color: 'var(--brand-yellow)' }}>
+                      <span className="font-technical" style={{ fontSize: '0.8rem', color: 'var(--brand-blue)' }}>
                         0{idx + 1}
                       </span>
                       <span>{link.name}</span>

@@ -55,6 +55,7 @@ const Footer: React.FC = () => {
           {/* Quick Links */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <span className="font-technical" style={{ color: 'var(--brand-yellow)' }}>Quick Links</span>
+            <div style={{ width: '40px', height: '2px', backgroundColor: 'var(--brand-blue)', marginTop: '-0.75rem', marginBottom: '0.25rem' }} />
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontFamily: 'var(--font-mono)', fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)' }}>
               <li>
                 <a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand-yellow)'} onMouseLeave={e => e.currentTarget.style.color = 'inherit'}>
@@ -82,6 +83,7 @@ const Footer: React.FC = () => {
           {/* Contact Details */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <span className="font-technical" style={{ color: 'var(--brand-yellow)' }}>Contact Info</span>
+            <div style={{ width: '40px', height: '2px', backgroundColor: 'var(--brand-blue)', marginTop: '-0.75rem', marginBottom: '0.25rem' }} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontFamily: 'var(--font-mono)', fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.7)' }}>
               <div>
                 <span style={{ color: '#ffffff', fontWeight: 'bold' }}>TEL:</span> +91 94435 52222

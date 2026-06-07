@@ -246,7 +246,7 @@ const ServicesCarousel: React.FC = () => {
                         top: 0,
                         width: '4px',
                         height: '100%',
-                        backgroundColor: 'var(--brand-yellow)'
+                        backgroundColor: 'var(--brand-blue)'
                       }} 
                     />
                   )}
@@ -295,7 +295,7 @@ const ServicesCarousel: React.FC = () => {
                         top: 0,
                         height: '100%',
                         width: `${progress}%`,
-                        backgroundColor: 'var(--brand-yellow)',
+                        backgroundColor: 'var(--brand-blue)',
                         transition: isMobile ? 'width 0.4s ease' : 'none'
                       }}
                     />
