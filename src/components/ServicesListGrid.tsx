@@ -40,67 +40,13 @@ export const ALL_SERVICES: ServiceItem[] = [
     features: ['Pantry & Hospitality Attendants', 'Front Desk Receptionists', 'Office Helpers', 'Document Management']
   },
   {
-    id: 'hvac-maintenance',
-    number: '04',
-    title: 'Electrical & HVAC Maintenance',
-    category: 'Technical MEP Services',
-    description: 'Certified electro-mechanical technicians managing HVAC systems, power backups, electrical distribution, and plumbing infrastructure.',
-    icon: '⚡',
-    features: ['HVAC & Chiller Operations', 'Generator Maintenance', 'Electrical Audits', 'Plumbing & Drainage']
-  },
-  {
-    id: 'deep-cleaning',
-    number: '05',
-    title: 'Deep Cleaning & Sanitation',
-    category: 'Specialized Cleaning',
-    description: 'Comprehensive deep cleaning for corporate floors, industrial spaces, move-in/move-out premises, and high-rise glass facade washing.',
-    icon: '✨',
-    features: ['Upholstery & Carpet Shampooing', 'Glass Facade Cleaning', 'Post-Construction Cleanup', 'Disinfection Services']
-  },
-  {
-    id: 'waste-management',
-    number: '06',
-    title: 'Waste Management & Recycling',
-    category: 'Environmental Care',
-    description: 'Systematic waste segregation, eco-friendly disposal, composting setup, and compliance-certified hazardous waste handling.',
-    icon: '♻️',
-    features: ['Solid Waste Segregation', 'Composting Solutions', 'Recycling Logistics', 'Statutory Compliance']
-  },
-  {
     id: 'private-investigations',
-    number: '07',
-    title: 'Private Corporate Investigations',
+    number: '04',
+    title: 'Corporate Investigation & Risk Management',
     category: 'Corporate Intelligence',
     description: 'Confidential background verification, corporate asset surveillance, fraud prevention, and discreet risk assessment services.',
     icon: '🔍',
     features: ['Employee Background Check', 'Corporate Asset Audit', 'Discreet Surveillance', 'Risk Mitigations']
-  },
-  {
-    id: 'event-security',
-    number: '08',
-    title: 'Event Security & Bouncers',
-    category: 'Crowd & VIP Protection',
-    description: 'Specialized security bouncers and crowd management teams tailored for high-profile corporate summits, expos, and private events.',
-    icon: '🔒',
-    features: ['VIP Escort & Protection', 'Crowd Flow Control', 'Valet & Parking Patrol', 'Emergency Evacuation']
-  },
-  {
-    id: 'pest-control',
-    number: '09',
-    title: 'Pest Control & Disinfection',
-    category: 'Property Protection',
-    description: 'Advanced pest management treatments removing termites, rodents, mosquitoes, and pests using non-toxic odor-free chemicals.',
-    icon: '🦟',
-    features: ['Termite Proofing', 'Rodent Control', 'Mosquito Fogging', 'Herbal Disinfection']
-  },
-  {
-    id: 'facility-supervision',
-    number: '10',
-    title: 'Facility Operations Supervision',
-    category: 'Complete Management',
-    description: 'Dedicated site managers coordinating all facility workforce teams, compliance, shift scheduling, and client feedback tracking.',
-    icon: '🏢',
-    features: ['On-site Site Managers', 'Daily Shift Reports', 'Vendor Management', 'SLA Adherence Tracking']
   }
 ];
 
@@ -122,27 +68,23 @@ const ServicesListGrid: React.FC<ServicesListGridProps> = ({ onSelectService }) 
       <div className="main-wrapper">
         {/* Section Header */}
         <div 
-          style={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
-            gap: '1rem',
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1.25rem',
             marginBottom: '4rem',
-            borderBottom: '2px solid var(--text-primary)',
-            paddingBottom: '2rem'
+            alignItems: 'flex-start'
           }}
         >
           <div 
-            style={{ 
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
+            style={{
               backgroundColor: 'var(--text-primary)',
               color: 'var(--bg-deep)',
               padding: '6px 14px',
               width: 'fit-content'
             }}
           >
-            <span className="font-technical" style={{ color: '#FFD54F', fontWeight: 800 }}>COMPLETE SERVICE DIRECTORY</span>
+            <span className="font-technical" style={{ color: '#FFD54F', fontWeight: 800 }}>CORE SERVICE DIRECTORY</span>
           </div>
 
           <h2 
@@ -154,12 +96,12 @@ const ServicesListGrid: React.FC<ServicesListGridProps> = ({ onSelectService }) 
               margin: 0
             }}
           >
-            ALL SERVICES OFFERED BY <br />
+            OUR 4 MAIN SERVICES <br />
             <span style={{ color: 'var(--brand-blue)' }}>YELLOW CITY PRIVATE LIMITED</span>
           </h2>
 
           <p style={{ maxWidth: '750px', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700 }}>
-            Right on our home portal: Browse our full range of 10+ integrated facility management services. Every service is backed by trained personnel, rigorous quality control, and 12,000+ satisfied clients.
+            Right on our home portal: Explore our 4 core integrated facility management service pillars. Every service is backed by trained personnel, rigorous quality control, and 12,000+ satisfied clients.
           </p>
         </div>
 
