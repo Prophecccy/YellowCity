@@ -1,17 +1,27 @@
 import React from 'react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (page: string) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const handleLinkClick = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate(id);
+    }
+  };
+
   return (
     <footer 
       style={{
-        backgroundColor: 'var(--text-primary)', // Deep Midnight Navy
-        borderTop: '1px solid var(--grid-line)',
+        backgroundColor: 'var(--text-primary)', // Deep Dark Blue
+        borderTop: '3px solid #FFD54F',
         position: 'relative',
         zIndex: 5,
         paddingTop: '5rem',
         paddingBottom: '3rem',
-        overflow: 'hidden',
-        color: 'hsl(45, 15%, 93%)' // Off-white text inside dark footer
+        color: '#FFFFFF'
       }}
     >
       <div className="main-wrapper">
@@ -21,7 +31,7 @@ const Footer: React.FC = () => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '3rem',
             paddingBottom: '4rem',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+            borderBottom: '1px solid rgba(255, 255, 255, 0.15)'
           }}
         >
           {/* Brand Info */}
@@ -29,52 +39,61 @@ const Footer: React.FC = () => {
             <img 
               src="/Yellow_City_logo.png" 
               alt="Yellow City Logo" 
-              style={{ height: '45px', width: '45px', objectFit: 'contain', alignSelf: 'flex-start' }} 
+              style={{ height: '50px', width: '50px', objectFit: 'contain', alignSelf: 'flex-start' }} 
             />
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
               <span style={{ 
                 fontFamily: 'var(--font-title)', 
-                fontSize: '1.4rem', 
-                color: '#ffffff',
-                letterSpacing: '-0.02em'
+                fontSize: '1.5rem', 
+                color: '#FFD54F',
+                letterSpacing: '-0.02em',
+                fontWeight: 900
               }}>
                 YELLOW CITY
               </span>
-              <span className="font-technical" style={{ fontSize: '0.65rem', color: 'var(--brand-yellow)', border: '1px solid var(--brand-yellow)', padding: '2px 6px' }}>
-                Est. 2026
+              <span style={{ fontSize: '0.85rem', color: '#FFFFFF', fontWeight: 800 }}>
+                Yellow City Private Limited
+              </span>
+              <span className="font-technical" style={{ fontSize: '0.75rem', color: '#FFD54F', fontWeight: 800 }}>
+                Facility Management Service
               </span>
             </div>
-            <p style={{ fontSize: '0.95rem', maxWidth: '340px', color: 'rgba(255, 255, 255, 0.7)' }}>
-              South India's premier facility management and private intelligence corporation. Delivering high-standard security, hospitality management, commercial cleaning, and corporate investigations.
+            <p style={{ fontSize: '0.95rem', maxWidth: '340px', color: 'rgba(255, 255, 255, 0.9)', fontWeight: 700 }}>
+              South India's premier integrated facility management corporation. Trusted by over 12,000+ satisfied commercial and residential clients across Tamil Nadu.
             </p>
-            <div className="font-technical" style={{ color: 'rgba(255, 255, 255, 0.4)' }}>
-              REG_NO: 33AAFCD5040J1ZP
+            <div className="font-technical" style={{ color: '#FFD54F', fontWeight: 800 }}>
+              ★ 12,000+ SATISFIED CUSTOMERS SERVED ★
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links (5 Pages) */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <span className="font-technical" style={{ color: 'var(--brand-yellow)' }}>Quick Links</span>
-            <div style={{ width: '40px', height: '2px', backgroundColor: 'var(--brand-blue)', marginTop: '-0.75rem', marginBottom: '0.25rem' }} />
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontFamily: 'var(--font-mono)', fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)' }}>
+            <span className="font-technical" style={{ color: '#FFD54F', fontWeight: 800, fontSize: '0.9rem' }}>PAGES & DIRECTORY</span>
+            <div style={{ width: '40px', height: '3px', backgroundColor: '#FFD54F', marginTop: '-0.75rem', marginBottom: '0.25rem' }} />
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.85rem', fontFamily: 'var(--font-mono)', fontSize: '0.95rem' }}>
               <li>
-                <a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand-yellow)'} onMouseLeave={e => e.currentTarget.style.color = 'inherit'}>
-                  Services
+                <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} style={{ color: '#FFFFFF', fontWeight: 800, transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#FFD54F'} onMouseLeave={e => e.currentTarget.style.color = '#FFFFFF'}>
+                  → Home Page
                 </a>
               </li>
               <li>
-                <a href="#locations" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand-yellow)'} onMouseLeave={e => e.currentTarget.style.color = 'inherit'}>
-                  Our Locations
+                <a href="#services" onClick={(e) => handleLinkClick(e, 'services')} style={{ color: '#FFFFFF', fontWeight: 800, transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#FFD54F'} onMouseLeave={e => e.currentTarget.style.color = '#FFFFFF'}>
+                  → Services Page
                 </a>
               </li>
               <li>
-                <a href="#about" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand-yellow)'} onMouseLeave={e => e.currentTarget.style.color = 'inherit'}>
-                  About Us
+                <a href="#gallery" onClick={(e) => handleLinkClick(e, 'gallery')} style={{ color: '#FFFFFF', fontWeight: 800, transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#FFD54F'} onMouseLeave={e => e.currentTarget.style.color = '#FFFFFF'}>
+                  → Gallery Page
                 </a>
               </li>
               <li>
-                <a href="#contact" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand-yellow)'} onMouseLeave={e => e.currentTarget.style.color = 'inherit'}>
-                  Contact Us
+                <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} style={{ color: '#FFFFFF', fontWeight: 800, transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#FFD54F'} onMouseLeave={e => e.currentTarget.style.color = '#FFFFFF'}>
+                  → About Page
+                </a>
+              </li>
+              <li>
+                <a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')} style={{ color: '#FFFFFF', fontWeight: 800, transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#FFD54F'} onMouseLeave={e => e.currentTarget.style.color = '#FFFFFF'}>
+                  → Contact Us Page
                 </a>
               </li>
             </ul>
@@ -82,20 +101,20 @@ const Footer: React.FC = () => {
 
           {/* Contact Details */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <span className="font-technical" style={{ color: 'var(--brand-yellow)' }}>Contact Info</span>
-            <div style={{ width: '40px', height: '2px', backgroundColor: 'var(--brand-blue)', marginTop: '-0.75rem', marginBottom: '0.25rem' }} />
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontFamily: 'var(--font-mono)', fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.7)' }}>
+            <span className="font-technical" style={{ color: '#FFD54F', fontWeight: 800, fontSize: '0.9rem' }}>CORPORATE HQ & CONTACT</span>
+            <div style={{ width: '40px', height: '3px', backgroundColor: '#FFD54F', marginTop: '-0.75rem', marginBottom: '0.25rem' }} />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontFamily: 'var(--font-mono)', fontSize: '0.95rem', color: '#FFFFFF', fontWeight: 800 }}>
               <div>
-                <span style={{ color: '#ffffff', fontWeight: 'bold' }}>TEL:</span> +91 94435 52222
+                <span style={{ color: '#FFD54F' }}>TEL:</span> +91 94435 52222
               </div>
               <div>
-                <span style={{ color: '#ffffff', fontWeight: 'bold' }}>MAIL:</span> info@yellowcity.in
+                <span style={{ color: '#FFD54F' }}>MAIL:</span> info@yellowcity.in
               </div>
               <div>
-                <span style={{ color: '#ffffff', fontWeight: 'bold' }}>LOC:</span> Corporate HQ, Erode, Tamil Nadu, IN.
+                <span style={{ color: '#FFD54F' }}>HQ:</span> Yellow City Private Limited, Erode, Tamil Nadu, IN.
               </div>
               <div>
-                <span style={{ color: '#ffffff', fontWeight: 'bold' }}>HOURS:</span> 08:00 - 20:00 [UTC+5:30]
+                <span style={{ color: '#FFD54F' }}>OPERATIONS:</span> 24/7 Dispatch Center
               </div>
             </div>
           </div>
@@ -111,12 +130,16 @@ const Footer: React.FC = () => {
             paddingTop: '2.5rem',
             gap: '1.5rem',
             fontFamily: 'var(--font-mono)',
-            fontSize: '0.75rem',
-            color: 'rgba(255, 255, 255, 0.4)'
+            fontSize: '0.8rem',
+            color: 'rgba(255, 255, 255, 0.7)',
+            fontWeight: 800
           }}
         >
           <div>
-            &copy; {new Date().getFullYear()} YELLOW CITY PVT LTD. ALL RIGHTS RESERVED.
+            &copy; {new Date().getFullYear()} YELLOW CITY PRIVATE LIMITED • FACILITY MANAGEMENT SERVICE. ALL RIGHTS RESERVED.
+          </div>
+          <div style={{ color: '#FFD54F' }}>
+            12,000+ SATISFIED CUSTOMERS
           </div>
         </div>
       </div>

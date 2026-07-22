@@ -9,7 +9,7 @@ const Hero = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.12,
-        delayChildren: 0.2,
+        delayChildren: 0.15,
       },
     },
   };
@@ -35,12 +35,12 @@ const Hero = () => {
     <section
       style={{
         position: 'relative',
-        minHeight: '100vh',
+        minHeight: '85vh',
         width: '100%',
         display: 'flex',
-        alignItems: 'center',
-        paddingTop: '120px',
-        paddingBottom: '80px',
+        alignItems: 'flex-start',
+        paddingTop: '105px',
+        paddingBottom: '3.5rem',
         overflow: 'hidden',
         borderBottom: '1px solid var(--grid-line)',
       }}
@@ -69,7 +69,7 @@ const Hero = () => {
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr',
-            gap: '3rem',
+            gap: '2.5rem',
           }}
           className="hero-grid-layout"
         >
@@ -83,74 +83,53 @@ const Hero = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: '1.5rem',
+              gap: '1.15rem',
             }}
           >
-            {/* Status Specs Header */}
+            {/* Prominent Client Stat Badge */}
             <div 
               style={{ 
-                display: 'flex', 
-                gap: '1rem',
-                border: '1px solid var(--grid-line)',
-                padding: '6px 12px',
-                backgroundColor: 'var(--bg-card)',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.02)',
-                alignItems: 'center'
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                backgroundColor: 'var(--text-primary)',
+                color: '#FFD54F',
+                padding: '6px 14px',
+                borderRadius: '9999px',
+                border: '2px solid var(--text-primary)',
+                boxShadow: '0 4px 14px rgba(0, 29, 74, 0.15)',
+                fontWeight: 800
               }}
             >
               <div 
                 style={{ 
-                  width: '6px', 
-                  height: '6px', 
-                  backgroundColor: 'var(--brand-blue)', 
+                  width: '7px', 
+                  height: '7px', 
+                  backgroundColor: '#FFD54F', 
                   borderRadius: '50%',
-                  boxShadow: '0 0 8px var(--brand-blue-glow)'
+                  boxShadow: '0 0 8px #FFD54F',
+                  flexShrink: 0
                 }} 
               />
-              <span className="font-technical" style={{ fontWeight: 600 }}>Premium Facility & Security Services</span>
+              <span className="font-technical" style={{ fontWeight: 800, color: '#FFD54F', letterSpacing: '0.05em', fontSize: '0.78rem' }}>
+                ★ 12,000+ SATISFIED CLIENTS SERVED ★
+              </span>
             </div>
 
             {/* Split Text Mask Title */}
-            <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-              <div style={{ overflow: 'hidden', height: 'auto', paddingBottom: '4px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '0.2rem' }}>
+              <div style={{ overflow: 'hidden', paddingBottom: '4px' }}>
                 <motion.h1 
                   variants={itemVariants} 
                   style={{ 
-                    fontSize: 'var(--font-size-hero)',
+                    fontSize: 'clamp(2.2rem, 5.5vw + 1rem, 4.2rem)',
                     color: 'var(--text-primary)',
                     letterSpacing: '-0.03em',
-                    lineHeight: '0.95'
+                    lineHeight: '1.02',
+                    fontWeight: 900
                   }}
                 >
-                  VIGILANT.
-                </motion.h1>
-              </div>
-              
-              <div style={{ overflow: 'hidden', height: 'auto', paddingBottom: '4px' }}>
-                <motion.h1 
-                  variants={itemVariants}
-                  style={{ 
-                    fontSize: 'var(--font-size-hero)',
-                    color: 'var(--text-primary)',
-                    letterSpacing: '-0.03em',
-                    lineHeight: '0.95'
-                  }}
-                >
-                  <span className="font-serif-italic" style={{ color: 'var(--brand-blue)', textShadow: '0 2px 10px var(--brand-blue-glow)' }}>pristine.</span>
-                </motion.h1>
-              </div>
-
-              <div style={{ overflow: 'hidden', height: 'auto', paddingBottom: '4px' }}>
-                <motion.h1 
-                  variants={itemVariants}
-                  style={{ 
-                    fontSize: 'var(--font-size-hero)',
-                    color: 'var(--text-primary)',
-                    letterSpacing: '-0.03em',
-                    lineHeight: '0.95'
-                  }}
-                >
-                  TRUSTED.
+                  VIGILANT. <span className="font-serif-italic" style={{ color: 'var(--brand-blue)', fontWeight: 900 }}>pristine.</span> TRUSTED.
                 </motion.h1>
               </div>
             </div>
@@ -159,77 +138,85 @@ const Hero = () => {
             <motion.p
               variants={fadeUpVariants}
               style={{
-                fontSize: 'clamp(1.1rem, 1.2vw + 0.8rem, 1.4rem)',
+                fontSize: 'clamp(0.95rem, 1vw + 0.7rem, 1.25rem)',
                 maxWidth: '650px',
-                marginTop: '1rem',
-                color: 'var(--text-muted)',
-                fontWeight: 400
+                marginTop: '0.25rem',
+                color: 'var(--text-primary)',
+                fontWeight: 700,
+                lineHeight: '1.5'
               }}
             >
-              We integrate professional security forces, hospitality-grade housekeeping, deep sanitation cleaning, and private corporate investigations. Syncing your business facilities with absolute reliability.
+              South India's premier Facility Management corporation. Delivering hospitality-grade security, professional housekeeping, deep sanitation, and corporate staffing for over 12,000+ satisfied commercial and residential clients.
             </motion.p>
 
-            {/* Interactive CTAs */}
+            {/* Interactive CTAs - Rounded Pills */}
             <motion.div
               variants={fadeUpVariants}
               style={{
                 display: 'flex',
                 flexWrap: 'wrap',
-                gap: '1.5rem',
-                marginTop: '2rem',
+                gap: '1rem',
+                marginTop: '1rem',
                 width: '100%'
               }}
             >
-              <a href="#services" className="btn-draft btn-draft-accent">
-                <span>Explore Services</span>
+              <a href="#services" className="btn-draft btn-draft-accent" style={{ fontWeight: 800, borderRadius: '9999px' }}>
+                <span>Explore All Services</span>
               </a>
-              <a href="#contact" className="btn-draft">
-                <span>Request Callback</span>
+              <a href="#contact" className="btn-draft" style={{ fontWeight: 800, borderRadius: '9999px' }}>
+                <span>Get Instant Quote</span>
               </a>
             </motion.div>
           </motion.div>
         </div>
 
-        {/* Floating Metrics Panel */}
+        {/* Floating Metrics Panel with Prominent 12,000+ Stat */}
         <div 
           style={{ 
-            marginTop: '5rem',
-            borderTop: '1px solid var(--grid-line)',
-            paddingTop: '2.5rem',
+            marginTop: '3.5rem',
+            borderTop: '2px solid var(--text-primary)',
+            paddingTop: '2rem',
             display: 'flex',
             justifyContent: 'space-between',
             flexWrap: 'wrap',
-            gap: '2rem'
+            gap: '1.5rem'
           }}
         >
-          <div className="hero-metrics-grid">
+          <div className="hero-metrics-grid" style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', width: '100%' }}>
+            <div style={{ backgroundColor: 'var(--text-primary)', color: 'var(--bg-deep)', padding: '1.1rem 1.25rem', borderRadius: '8px', border: '2px solid var(--text-primary)', maxWidth: '100%', boxSizing: 'border-box' }}>
+              <div className="font-technical" style={{ color: '#FFD54F', fontWeight: 800 }}>01. PROMINENT STAT</div>
+              <div style={{ fontSize: '2rem', fontFamily: 'var(--font-title)', color: '#FFFFFF', marginTop: '0.2rem', fontWeight: 900 }}>
+                12,000<span style={{ color: '#FFD54F' }}>+</span>
+              </div>
+              <div className="font-technical" style={{ fontSize: '0.75rem', color: '#FFD54F', fontWeight: 800 }}>SATISFIED_CUSTOMERS</div>
+            </div>
             <div>
-              <div className="font-technical">01.</div>
-              <div style={{ fontSize: '1.8rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.25rem' }}>
+              <div className="font-technical" style={{ fontWeight: 800 }}>02. PERFORMANCE</div>
+              <div style={{ fontSize: '1.75rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.2rem', fontWeight: 900 }}>
                 98.4<span style={{ color: 'var(--brand-blue)' }}>%</span>
               </div>
-              <div className="font-technical" style={{ fontSize: '0.65rem' }}>CLIENT_RETENTION</div>
+              <div className="font-technical" style={{ fontSize: '0.65rem', fontWeight: 700 }}>CLIENT_RETENTION</div>
             </div>
             <div>
-              <div className="font-technical">02.</div>
-              <div style={{ fontSize: '1.8rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.25rem' }}>
+              <div className="font-technical" style={{ fontWeight: 800 }}>03. WORKFORCE</div>
+              <div style={{ fontSize: '1.75rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.2rem', fontWeight: 900 }}>
                 500<span style={{ color: 'var(--brand-blue)' }}>+</span>
               </div>
-              <div className="font-technical" style={{ fontSize: '0.65rem' }}>VERIFIED_STAFF_UNITS</div>
+              <div className="font-technical" style={{ fontSize: '0.65rem', fontWeight: 700 }}>VERIFIED_STAFF_UNITS</div>
             </div>
             <div>
-              <div className="font-technical">03.</div>
-              <div style={{ fontSize: '1.8rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.25rem' }}>
+              <div className="font-technical" style={{ fontWeight: 800 }}>04. SUPPORT</div>
+              <div style={{ fontSize: '1.75rem', fontFamily: 'var(--font-title)', color: 'var(--text-primary)', marginTop: '0.2rem', fontWeight: 900 }}>
                 24<span style={{ color: 'var(--brand-blue)' }}>/</span>7
               </div>
-              <div className="font-technical" style={{ fontSize: '0.65rem' }}>EMERGENCY_DISPATCH</div>
+              <div className="font-technical" style={{ fontSize: '0.65rem', fontWeight: 700 }}>EMERGENCY_DISPATCH</div>
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-            <div>24/7 Support Active</div>
-            <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--text-primary)' }} />
-            <div>Tamil Nadu, India</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--text-primary)', fontWeight: 800 }}>
+            <div>24/7 Operations Active</div>
+            <div style={{ width: '30px', height: '2px', backgroundColor: 'var(--text-primary)' }} />
+            <div>Chennai & Coimbatore, TN</div>
           </div>
         </div>
       </div>

@@ -5,25 +5,24 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Syne:wght@700;800&display=swap');
 
 :root {
-  /* Color Palette - Vibrant, Warm, High-Contrast Premium */
-  --bg-deep: hsl(40, 15%, 97%);        /* Soft Warm Cream Canvas */
-  --bg-panel: hsl(40, 10%, 93%);       /* Soft Light Warm Grey */
-  --bg-card: #ffffff;                  /* Crisp Clean White Cards */
-  --text-primary: hsl(224, 60%, 10%);  /* Deep Midnight Corporate Navy */
-  --text-muted: hsl(220, 15%, 45%);    /* Muted Slate Grey */
+  /* Color Palette - Mango Yellow Background & Bold Dark Blue Typography */
+  --bg-deep: #FFC107;                  /* Rich Mango Yellow Canvas */
+  --bg-panel: #FFA000;                 /* Deep Mango Panel */
+  --bg-card: #FFF8E7;                  /* Cream Mango High-Contrast Card */
+  --text-primary: #001D4A;             /* Bold Deep Dark Blue */
+  --text-muted: #0D3B66;               /* Dark Blue Secondary */
   
-  /* Saturated Brand Yellow */
-  --brand-yellow: hsl(48, 100%, 50%);  
-  --brand-yellow-glow: hsla(48, 100%, 50%, 0.25);
+  /* Saturated Brand Accent Colors */
+  --brand-yellow: #FFCA28;  
+  --brand-yellow-glow: rgba(255, 202, 40, 0.4);
 
-  /* Exact Logo-Matching Corporate Brand Blue */
-  --brand-blue: #10377c;
-  --brand-blue-glow: rgba(16, 55, 124, 0.15);
+  /* Deep Corporate Dark Blue */
+  --brand-blue: #001D4A;
+  --brand-blue-glow: rgba(0, 29, 74, 0.25);
 
-  
   /* Layout Lines - Drawing Grids */
-  --grid-line: hsla(224, 60%, 10%, 0.08);
-  --grid-line-active: hsla(48, 100%, 50%, 0.5);
+  --grid-line: rgba(0, 29, 74, 0.18);
+  --grid-line-active: rgba(0, 29, 74, 0.5);
   
   /* Fonts Stack */
   --font-title: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -113,14 +112,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: -0.02em;
+  color: var(--text-primary);
 }
 
 .font-serif-italic {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: none;
   letter-spacing: normal;
+  color: var(--brand-blue);
 }
 
 .font-technical {
@@ -129,12 +130,20 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.05em;
   color: var(--text-muted);
   text-transform: uppercase;
+  font-weight: 700;
+}
+
+p, label, input, textarea, button {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+span {
+  font-weight: 700;
 }
 
 p {
-  color: var(--text-muted);
   font-size: clamp(0.95rem, 1vw + 0.6rem, 1.1rem);
-  font-weight: 400;
   line-height: 1.7;
 }
 
@@ -230,7 +239,7 @@ a {
   font-family: var(--font-mono);
   text-transform: uppercase;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 800;
   padding: 0.95rem 2rem;
   background: transparent;
   color: var(--text-primary);
@@ -244,6 +253,15 @@ a {
   z-index: 1;
 }
 
+.btn-draft span,
+.btn-draft div,
+.btn-draft a {
+  color: inherit;
+  position: relative;
+  z-index: 2;
+  transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .btn-draft::before {
   content: '';
   position: absolute;
@@ -251,16 +269,22 @@ a {
   top: 0;
   width: 100%;
   height: 100%;
-  background: var(--brand-blue);
-  z-index: -1;
+  background: var(--text-primary);
+  z-index: 1;
   transform: translateY(101%);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.btn-draft:hover,
+.btn-draft:hover span,
+.btn-draft:hover div,
+.btn-draft:hover a {
+  color: #FFD54F !important;
+}
+
 .btn-draft:hover {
-  color: var(--bg-deep);
   border-color: var(--text-primary);
-  box-shadow: 0 4px 20px var(--brand-blue-glow);
+  box-shadow: 0 4px 20px rgba(0, 29, 74, 0.3);
   transform: translateY(-2px);
 }
 
@@ -277,8 +301,11 @@ a {
   background: var(--text-primary);
 }
 
-.btn-draft-accent:hover {
-  color: var(--bg-deep);
+.btn-draft-accent:hover,
+.btn-draft-accent:hover span,
+.btn-draft-accent:hover div,
+.btn-draft-accent:hover a {
+  color: #FFD54F !important;
   border-color: var(--text-primary);
 }
 
@@ -334,9 +361,14 @@ a {
   }
   .hero-metrics-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.5rem !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
     width: 100% !important;
+  }
+  @media (min-width: 550px) and (max-width: 768px) {
+    .hero-metrics-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
   }
   p {
     font-size: clamp(0.85rem, 4vw, 0.95rem) !important;
@@ -365,6 +397,150 @@ a {
   .footer-status-row {
     flex-wrap: wrap !important;
     gap: 1rem !important;
+  }
+}
+
+/* Service List Grid Compact Mobile Cards */
+.service-list-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--text-primary);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 4px 0px var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.service-list-card .service-title {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  word-break: normal;
+  overflow-wrap: normal;
+  white-space: normal;
+}
+
+@media (max-width: 768px) {
+  .service-list-card {
+    padding: 1.15rem 1rem !important;
+    box-shadow: 3px 3px 0px var(--text-primary) !important;
+  }
+  .service-list-card .service-icon {
+    font-size: 1.5rem !important;
+  }
+  .service-list-card .service-number {
+    font-size: 0.75rem !important;
+  }
+  .service-list-card .service-header-row {
+    margin-bottom: 0.65rem !important;
+    padding-bottom: 0.4rem !important;
+  }
+  .service-list-card .service-category {
+    font-size: 0.65rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .service-list-card .service-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.3 !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+  .service-list-card .service-desc {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.4 !important;
+  }
+  .service-list-card .service-tags {
+    gap: 0.35rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+  .service-list-card .service-tag {
+    font-size: 0.65rem !important;
+    padding: 2px 6px !important;
+  }
+  .service-list-card .btn-draft {
+    padding: 0.55rem 0.75rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Gallery Compact Mobile Cards */
+.gallery-card-compact {
+  background-color: var(--bg-card);
+  border: 2px solid var(--text-primary);
+  box-shadow: 6px 6px 0px var(--text-primary);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card-compact .gallery-img-area {
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 2px solid var(--text-primary);
+  background-color: #FFB300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-card-compact .gallery-title {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  word-break: normal;
+  overflow-wrap: normal;
+  white-space: normal;
+}
+
+.gallery-card-compact .gallery-info-area {
+  padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .gallery-card-compact {
+    box-shadow: 3px 3px 0px var(--text-primary) !important;
+  }
+  .gallery-card-compact .gallery-img-area {
+    height: 135px !important;
+  }
+  .gallery-card-compact .gallery-category-badge {
+    top: 8px !important;
+    right: 8px !important;
+    padding: 2px 7px !important;
+    font-size: 0.65rem !important;
+  }
+  .gallery-card-compact .gallery-info-area {
+    padding: 1rem 0.85rem !important;
+  }
+  .gallery-card-compact .gallery-location-tag {
+    font-size: 0.65rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .gallery-card-compact .gallery-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.35rem !important;
+    line-height: 1.25 !important;
+  }
+  .gallery-card-compact .gallery-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+  .gallery-tabs-scroller {
+    gap: 0.5rem !important;
+    overflow-x: auto !important;
+    padding-bottom: 0.5rem !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .gallery-tabs-scroller button {
+    padding: 0.45rem 1rem !important;
+    font-size: 0.75rem !important;
+    flex-shrink: 0;
   }
 }
 

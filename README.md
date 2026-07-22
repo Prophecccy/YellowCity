@@ -1,28 +1,32 @@
-# Yellow City Private Ltd | Premium Facility Management & Security Portal
+# Yellow City Private Limited | Facility Management Service Portal
 
-A high-fidelity, vibrant, and interactive web application designed for **Yellow City Private Ltd**, South India's premier agency for industrial security, hospitality housekeeping, deep cleaning sanitization, and corporate investigation services.
+A high-fidelity, vibrant web application designed for **Yellow City Private Limited**, South India's premier agency for industrial security, hospitality housekeeping, deep cleaning sanitization, electrical/HVAC maintenance, and corporate investigation services. Trusted by **12,000+ satisfied customers**.
 
 ---
 
 ## ⚡ Tech Stack & Architecture
 
 * **Core Framework**: React 19 + TypeScript + Vite 8
-* **Styling**: Vanilla CSS (designed using modern typographic rules, fluid clamps, and HSL variables)
+* **Routing**: 5-Page SPA Navigation (`Home`, `Services`, `Gallery`, `About`, `Contact Us`) with active state and hash URL syncing
+* **Styling**: Vanilla CSS with Mango Yellow theme tokens & bold Dark Blue typography system
 * **Smooth Scrolling**: Lenis Scroll Engine
 * **Animations**:
-  * **GSAP & GSAP ScrollTrigger**: Scroll-based element pinning, line masks, and canvas triggers
-  * **Framer Motion**: Smooth hover spring transitions, dynamic nav island morphing, and staggered component entrance fades
+  * **GSAP & GSAP ScrollTrigger**: Scroll-based element pinning and canvas triggers
+  * **Framer Motion**: Interactive lightboxes, staggered list animations, and mobile menu overlays
 * **Lead Capture Dispatch**: Serverless integration using Web3Forms with strict phone format validation
 
 ---
 
 ## 🎨 Color Palette & Visual System
 
-* **Canvas Background**: Warm off-white/cream (`#fcfcf9` / `hsl(45, 18%, 98%)`)
-* **Primary Text & Panels**: Deep corporate steel/navy (`#0a1128` / `hsl(224, 60%, 10%)`)
-* **Vibrant Brand Accent**: Saturated safety yellow (`#FFD200` / `hsl(49, 100%, 50%)`)
-* **Logo Brand Blue Accent**: Exact logo-matching corporate brand blue (`#10377c` / `hsl(218, 77%, 27%)`) used for highlights, custom SVG indicators, card markers, active input focus halos, and structural decorative strips under section tags.
-* **Interactive Layering**: Drifting background gradient blobs and an animated tactile noise overlay for a premium film-grain paper feel.
+* **Canvas Background**: Rich Mango Yellow (`#FFC107`)
+* **Primary Text & Panels**: Bold Deep Dark Blue (`#001D4A`)
+* **Cards & High-Contrast Containers**: Warm Mango Cream (`#FFF8E7`) with 2px dark blue borders
+* **Corporate Text Branding**:
+  * Official Name: **Yellow City Private Limited**
+  * Tagline: **Facility Management Service**
+  * Key Stat Highlight: **12,000+ Satisfied Customers**
+* **Interactive Layering**: Drifting background gradient blobs and noise filter for film-grain paper feel.
 
 ---
 
@@ -31,35 +35,30 @@ A high-fidelity, vibrant, and interactive web application designed for **Yellow 
 ```text
 Yellow_City/
 ├── public/
-│   ├── assets/
-│   │   ├── hero_bg.png                 # Hero background pattern
-│   │   ├── service_security.png        # Security illustration
-│   │   ├── service_housekeeping.png    # Housekeeping illustration
-│   │   ├── service_cleaning.png        # Deep cleaning illustration
-│   │   └── service_detective.png       # Detective illustration
+│   ├── assets/                         # Graphic assets & service images
+│   ├── Yellow_City_logo.png            # Official company logo
 │   ├── favicon.svg                     # Web browser tab icon
-│   └── icons.svg                       # Consolidated vector icons
+│   └── icons.svg                       # Vector icon set
 ├── src/
-│   ├── assets/                         # Asset imports
-│   ├── components/                     # High-fidelity visual components
-│   │   ├── About.tsx                   # Service specs, compliance, & stats
-│   │   ├── ContactForm.tsx             # Validated input panels & Web3Forms dispatch
-│   │   ├── Footer.tsx                  # Corporate deep navy footer
-│   │   ├── Header.tsx                  # Dynamic Island center-capsule navigation bar
-│   │   ├── Hero.tsx                    # "VIGILANT. PRISTINE. TRUSTED." staggered header
-│   │   ├── LocationGrid.tsx            # Operational hubs styled as shadow cards
-│   │   ├── NoiseOverlay.tsx            # Custom SVG paper-grain noise filter
-│   │   ├── ServiceVisual.tsx           # Custom animated SVGs for each service category
-│   │   ├── ServicesCarousel.tsx        # GSAP ScrollTrigger-pinned sliding service gallery
-│   │   └── VibrantBackground.tsx       # Floating backdrop gradient mesh orbs
+│   ├── components/                     # 5-Page SPA & UI Components
+│   │   ├── About.tsx                   # Corporate core, 12,000+ client stats & compliance
+│   │   ├── ContactForm.tsx             # Interactive contact form & location cards
+│   │   ├── Footer.tsx                  # Deep navy footer with official branding & 5-page links
+│   │   ├── Gallery.tsx                 # [NEW] Dedicated Gallery page with category lightboxes
+│   │   ├── Header.tsx                  # Navigation header with "Yellow City Private Limited" text & 5 pages
+│   │   ├── Hero.tsx                    # "VIGILANT. PRISTINE. TRUSTED." hero with 12,000+ stat badge
+│   │   ├── LocationGrid.tsx            # Operational hubs across Tamil Nadu
+│   │   ├── NoiseOverlay.tsx            # Custom SVG paper-grain filter
+│   │   ├── ServicesCarousel.tsx        # GSAP-pinned sliding service gallery
+│   │   ├── ServicesListGrid.tsx        # [NEW] Complete visible directory listing all 10+ services
+│   │   └── VibrantBackground.tsx       # Backdrop gradient mesh orbs
 │   ├── hooks/
 │   │   └── useLenis.ts                 # GSAP-linked Lenis scroll synchronization hook
-│   ├── App.tsx                         # Root app coordinator
-│   ├── index.css                       # Design variables, typography, and utility rules
+│   ├── App.tsx                         # 5-Page SPA Router & Coordinator
+│   ├── index.css                       # Mango Yellow & Bold Dark Blue design system tokens
 │   └── main.tsx                        # DOM render entrypoint
-├── index.html                          # Entry document with preconnect Google Fonts
-├── vite.config.ts                      # Local server and plugin rules
-└── tsconfig.json                       # TypeScript compiler profiles
+├── index.html                          # HTML entry document
+└── vite.config.ts                      # Vite build configuration
 ```
 
 ---

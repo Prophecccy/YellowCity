@@ -22,19 +22,21 @@ const About: React.FC = () => {
         >
           {/* Left Side: Editorial Narrative */}
           <div className="about-narrative-col" style={{ position: 'relative', zIndex: 2 }}>
-            <div className="font-technical" style={{ marginBottom: '0.5rem' }}>Our Operational Core</div>
-            <div style={{ width: '60px', height: '4px', backgroundColor: 'var(--brand-blue)', marginBottom: '1.5rem' }} />
-            <h2 style={{ fontSize: 'var(--font-size-section)', color: 'var(--text-primary)', marginBottom: '2rem' }}>
-              BUILT WITH <br/>
-              UNCOMPROMISING <br/>
-              <span className="font-serif-italic" style={{ color: 'var(--brand-blue)', textShadow: '0 2px 10px var(--brand-blue-glow)' }}>compliance.</span>
+            <div style={{ display: 'inline-flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
+              <div className="font-technical" style={{ fontWeight: 800 }}>About Yellow City Private Limited</div>
+              <div style={{ width: '100%', height: '4px', backgroundColor: 'var(--text-primary)' }} />
+            </div>
+            <h2 style={{ fontSize: 'var(--font-size-section)', color: 'var(--text-primary)', marginBottom: '2rem', fontWeight: 900 }}>
+              FACILITY MANAGEMENT <br/>
+              BUILT FOR <br/>
+              <span className="font-serif-italic" style={{ color: 'var(--brand-blue)', fontWeight: 900 }}>12,000+ satisfied clients.</span>
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              <p>
-                Yellow City Private Ltd operates on a core thesis: facility management and private intelligence cannot be delegated to generic templates. It requires rigorous, human-in-the-loop coordination.
+              <p style={{ color: 'var(--text-primary)', fontWeight: 700 }}>
+                Yellow City Private Limited operates as South India's premier Facility Management Service corporation. Serving over 12,000+ satisfied commercial complexes, corporate offices, industrial hubs, and gated communities.
               </p>
-              <p>
-                Every security officer, housekeeping steward, deep cleaning technician, and private investigator undergoes exhaustive background verifications, police verification, and intensive situational training before dispatch.
+              <p style={{ color: 'var(--text-primary)', fontWeight: 700 }}>
+                Every security officer, housekeeping steward, deep cleaning technician, and private investigator undergoes exhaustive background verifications, police verification, and intensive situational training before site deployment.
               </p>
             </div>
           </div>
@@ -43,38 +45,38 @@ const About: React.FC = () => {
           <div 
             style={{
               backgroundColor: 'var(--bg-card)',
-              border: '1px solid var(--grid-line)',
+              border: '2px solid var(--text-primary)',
               position: 'relative',
-              boxShadow: '0 10px 40px rgba(0,0,0,0.03)'
+              boxShadow: '6px 6px 0px var(--text-primary)'
             }}
             className="premium-specs-card"
           >
-            <h3 style={{ fontFamily: 'var(--font-title)', fontSize: '1.3rem', color: 'var(--text-primary)', marginBottom: '2rem', textTransform: 'uppercase' }}>
-              Operational Foundations
+            <h3 style={{ fontFamily: 'var(--font-title)', fontSize: '1.3rem', color: 'var(--text-primary)', marginBottom: '2rem', textTransform: 'uppercase', fontWeight: 900 }}>
+              YELLOW CITY CORPORATE CORE
             </h3>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem', fontFamily: 'var(--font-mono)', fontSize: '0.85rem' }}>
               {/* Pillar 1 */}
-              <div style={{ borderLeft: '3px solid var(--brand-yellow)', paddingLeft: '1rem' }}>
-                <div style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>01. 100% Police Verified</div>
-                <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-                  Rigorous background and criminal record checks.
+              <div style={{ borderLeft: '4px solid var(--text-primary)', paddingLeft: '1rem' }}>
+                <div style={{ color: 'var(--text-primary)', fontWeight: 900, fontSize: '1rem' }}>01. 12,000+ Satisfied Clients</div>
+                <div style={{ color: 'var(--text-primary)', fontSize: '0.8rem', marginTop: '0.25rem', fontWeight: 700 }}>
+                  Proven track record of facility management across Tamil Nadu.
                 </div>
               </div>
 
               {/* Pillar 2 */}
-              <div style={{ borderLeft: '3px solid var(--brand-blue)', paddingLeft: '1rem' }}>
-                <div style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>02. Statutory Compliance</div>
-                <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-                  Strict adherence to PF, ESI, and government labor standards.
+              <div style={{ borderLeft: '4px solid var(--brand-blue)', paddingLeft: '1rem' }}>
+                <div style={{ color: 'var(--text-primary)', fontWeight: 900, fontSize: '1rem' }}>02. 100% Police & Background Verified</div>
+                <div style={{ color: 'var(--text-primary)', fontSize: '0.8rem', marginTop: '0.25rem', fontWeight: 700 }}>
+                  Complete identity verifications and statutory compliance.
                 </div>
               </div>
 
               {/* Pillar 3 */}
-              <div style={{ borderLeft: '3px solid var(--brand-yellow)', paddingLeft: '1rem' }}>
-                <div style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>03. 24/7 Command Desk</div>
-                <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-                  Continuous dispatch support and active location tracking.
+              <div style={{ borderLeft: '4px solid var(--text-primary)', paddingLeft: '1rem' }}>
+                <div style={{ color: 'var(--text-primary)', fontWeight: 900, fontSize: '1rem' }}>03. 24/7 Command & Emergency Dispatch</div>
+                <div style={{ color: 'var(--text-primary)', fontSize: '0.8rem', marginTop: '0.25rem', fontWeight: 700 }}>
+                  Continuous dispatch support, SLA tracking, and location management.
                 </div>
               </div>
             </div>
@@ -83,13 +85,14 @@ const About: React.FC = () => {
             <div 
               style={{
                 marginTop: '2rem',
-                border: '1px dashed var(--grid-line)',
+                border: '2px dashed var(--text-primary)',
                 height: '80px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                backgroundColor: 'var(--bg-deep)'
               }}
             >
               <img 
@@ -98,23 +101,22 @@ const About: React.FC = () => {
                 style={{ 
                   height: '55px', 
                   objectFit: 'contain', 
-                  opacity: 0.18, 
-                  filter: 'grayscale(100%) contrast(1.2)' 
+                  opacity: 0.3
                 }} 
               />
               <div 
                 style={{ 
                   position: 'absolute', 
                   fontFamily: 'var(--font-mono)', 
-                  fontSize: '0.65rem', 
-                  color: 'var(--text-muted)',
+                  fontSize: '0.75rem', 
+                  color: 'var(--text-primary)',
                   letterSpacing: '0.1em',
-                  fontWeight: 'bold',
+                  fontWeight: 900,
                   textTransform: 'uppercase',
                   pointerEvents: 'none'
                 }}
               >
-                Secure & Verified
+                Yellow City Private Limited Verified
               </div>
             </div>
           </div>

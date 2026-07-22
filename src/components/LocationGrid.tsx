@@ -45,8 +45,10 @@ const LocationGrid: React.FC = () => {
           }}
         >
           <div>
-            <div className="font-technical" style={{ marginBottom: '0.5rem', color: 'var(--text-muted)' }}>Our Locations</div>
-            <div style={{ width: '60px', height: '4px', backgroundColor: 'var(--brand-blue)', marginBottom: '1.25rem' }} />
+            <div style={{ display: 'inline-flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.25rem' }}>
+              <div className="font-technical" style={{ color: 'var(--text-muted)' }}>Our Locations</div>
+              <div style={{ width: '100%', height: '4px', backgroundColor: 'var(--brand-blue)' }} />
+            </div>
             <h2 style={{ fontSize: 'var(--font-size-section)', color: 'var(--text-primary)' }}>
               OPERATING <span className="font-serif-italic" style={{ color: 'var(--brand-yellow)', textShadow: '0 2px 10px rgba(255,210,0,0.1)' }}>sectors</span>
             </h2>
