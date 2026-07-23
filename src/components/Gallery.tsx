@@ -6,7 +6,6 @@ export interface GalleryItem {
   title: string;
   category: 'Security' | 'Housekeeping' | 'Cleaning & Staffing' | 'Detective Agency';
   image: string;
-  location: string;
   description: string;
 }
 
@@ -17,7 +16,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Armed & Unarmed Guarding',
     category: 'Security',
     image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
-    location: 'IT Park, Chennai',
     description: 'Vetted uniformed security officers carrying out physical guarding and gate duty.'
   },
   {
@@ -25,7 +23,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: '24/7 Access Control',
     category: 'Security',
     image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80',
-    location: 'Tech Tower, Coimbatore',
     description: 'Round-the-clock entry gate management, biometric badge checks, and perimeter logging.'
   },
   {
@@ -33,7 +30,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'CCTV Monitoring',
     category: 'Security',
     image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
-    location: 'Financial Hub, Madurai',
     description: 'High-definition video surveillance command desk actively scanning corporate premises.'
   },
   {
@@ -41,7 +37,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Visitor Log Management',
     category: 'Security',
     image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
-    location: 'Commercial Complex, Salem',
     description: 'Digital check-in visitor validation, guest badge issuance, and parking space guidance.'
   },
 
@@ -51,7 +46,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Daily Janitorial Care',
     category: 'Housekeeping',
     image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
-    location: 'Corporate HQ, Chennai',
     description: 'Continuous daily janitorial cleaning, waste bin clearing, and workstation surface care.'
   },
   {
@@ -59,7 +53,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Floor Scrubbing & Polishing',
     category: 'Housekeeping',
     image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80',
-    location: 'Industrial Park, Tiruchirappalli',
     description: 'Heavy-duty mechanized scrubbing, granite crystallization, and diamond pad floor polishing.'
   },
   {
@@ -67,7 +60,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Restroom Sanitization',
     category: 'Housekeeping',
     image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
-    location: 'IT Expressway, Chennai',
     description: 'Hospitality-grade washroom hygiene maintenance and anti-microbial disinfection.'
   },
   {
@@ -75,7 +67,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Eco-friendly Chemicals',
     category: 'Housekeeping',
     image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80',
-    location: 'Green Tech Hub, Coimbatore',
     description: 'Non-toxic, bio-degradable cleaning agents protecting indoor air quality and employee health.'
   },
 
@@ -85,7 +76,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Pantry & Hospitality Attendants',
     category: 'Cleaning & Staffing',
     image: 'https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=800&q=80',
-    location: 'Executive Suite, Madurai',
     description: 'Professional pantry stewards handling executive refreshment service and kitchen upkeep.'
   },
   {
@@ -93,7 +83,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Front Desk Receptionists',
     category: 'Cleaning & Staffing',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
-    location: 'Business Bay, Chennai',
     description: 'Courteous front-office reception staff managing visitor welcome, call routing, and mail handling.'
   },
   {
@@ -101,7 +90,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Office Helpers',
     category: 'Cleaning & Staffing',
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
-    location: 'Corporate Center, Salem',
     description: 'Deputed office boys facilitating meeting room setups, file movements, and errand assistance.'
   },
   {
@@ -109,7 +97,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Document Management',
     category: 'Cleaning & Staffing',
     image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=800&q=80',
-    location: 'Legal Hub, Coimbatore',
     description: 'Systematic physical file indexing, record dispatching, and confidential paper shredding.'
   },
 
@@ -119,7 +106,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Employee Background Check',
     category: 'Detective Agency',
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-    location: 'Financial Tower, Chennai',
     description: 'Comprehensive employment history, education, and criminal record verification.'
   },
   {
@@ -127,7 +113,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Corporate Asset Audit',
     category: 'Detective Agency',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-    location: 'Manufacturing Hub, Hosur',
     description: 'Investigative asset tracking, inventory leakage audit, and intellectual property protection.'
   },
   {
@@ -135,7 +120,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Discreet Surveillance',
     category: 'Detective Agency',
     image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
-    location: 'Trade Center, Madurai',
     description: 'Low-profile field observation, undercover intelligence gathering, and video logging.'
   },
   {
@@ -143,7 +127,6 @@ const GALLERY_DATA: GalleryItem[] = [
     title: 'Risk Mitigations',
     category: 'Detective Agency',
     image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80',
-    location: 'Corporate HQ, Coimbatore',
     description: 'Executive threat assessment, security vulnerability audit, and fraud prevention strategies.'
   }
 ];
@@ -382,9 +365,6 @@ const Gallery: React.FC = () => {
                     </div>
 
                     <div className="gallery-info-area" style={{ padding: '1.25rem' }}>
-                      <div className="font-technical gallery-location-tag" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '0.4rem', fontWeight: 800 }}>
-                        📍 {item.location}
-                      </div>
                       <h3 className="gallery-title" style={{ fontSize: '1.1rem', color: 'var(--text-primary)', fontWeight: 800, marginBottom: '0.5rem', lineHeight: '1.3' }}>
                         {item.title}
                       </h3>
@@ -465,7 +445,7 @@ const Gallery: React.FC = () => {
                   }}
                 />
               </div>
-              <span className="font-technical" style={{ fontWeight: 800, color: 'var(--brand-blue)' }}>{selectedImage.category} • {selectedImage.location}</span>
+              <span className="font-technical" style={{ fontWeight: 800, color: 'var(--brand-blue)' }}>{selectedImage.category}</span>
               <h2 style={{ fontSize: '1.5rem', fontWeight: 900, marginTop: '0.5rem', color: 'var(--text-primary)' }}>{selectedImage.title}</h2>
               <p style={{ fontSize: '1rem', fontWeight: 700, marginTop: '0.5rem', color: 'var(--text-primary)' }}>{selectedImage.description}</p>
             </div>
