@@ -1,63 +1,190 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-interface GalleryItem {
+export interface GalleryItem {
   id: string;
   title: string;
-  category: 'Security' | 'Housekeeping' | 'Facilities' | 'Corporate';
+  category: 'Security' | 'Housekeeping' | 'Cleaning & Staffing' | 'Detective Agency';
   image: string;
   location: string;
   description: string;
+  subService: string;
 }
 
 const GALLERY_DATA: GalleryItem[] = [
+  // 01. SECURITY SERVICES
   {
-    id: '1',
-    title: '24/7 Corporate Guarding Force',
+    id: 'sec-1',
+    title: 'Armed & Unarmed Guarding',
+    subService: 'Armed & Unarmed Guarding',
+    category: 'Security',
+    image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
+    location: 'IT Park, Chennai',
+    description: 'Vetted uniformed security officers carrying out physical guarding and gate duty.'
+  },
+  {
+    id: 'sec-2',
+    title: '24/7 Access Control',
+    subService: '24/7 Access Control',
     category: 'Security',
     image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80',
-    location: 'IT Park, Chennai',
-    description: 'Vetted uniformed security personnel carrying out round-the-clock perimeter surveillance and access control.'
+    location: 'Tech Tower, Coimbatore',
+    description: 'Round-the-clock entry gate management, biometric badge checks, and perimeter logging.'
   },
   {
-    id: '2',
-    title: 'Hospitality Housekeeping Operations',
-    category: 'Housekeeping',
-    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
-    location: 'Commercial Tower, Coimbatore',
-    description: 'Hospitality-grade daily janitorial and sanitization operations for executive office spaces.'
-  },
-  {
-    id: '3',
-    title: 'Corporate Investigation & Risk Management',
-    category: 'Corporate',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-    location: 'Financial Hub, Madurai',
-    description: 'Discreet background verification and corporate risk surveillance carried out by senior operatives.'
-  },
-  {
-    id: '4',
-    title: 'Deep Sanitation & Upholstery Cleaning',
-    category: 'Housekeeping',
-    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80',
-    location: 'Tech Campus, Salem',
-    description: 'Heavy-duty machine scrubbing and chemical disinfection of high-traffic commercial flooring.'
-  },
-  {
-    id: '5',
-    title: 'Industrial MEP & HVAC System Audits',
-    category: 'Facilities',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
-    location: 'Manufacturing Hub, Tiruchirappalli',
-    description: 'Electro-mechanical technicians maintaining central air conditioning, power backup, and plumbing networks.'
-  },
-  {
-    id: '6',
-    title: 'Event Security & VIP Escort Bouncers',
+    id: 'sec-3',
+    title: 'CCTV Monitoring',
+    subService: 'CCTV Monitoring',
     category: 'Security',
     image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
-    location: 'Convention Center, Chennai',
-    description: 'Tactical security bouncers managing crowd entry, VIP movement, and event parking flow.'
+    location: 'Financial Hub, Madurai',
+    description: 'High-definition video surveillance command desk actively scanning corporate premises.'
+  },
+  {
+    id: 'sec-4',
+    title: 'Visitor Log Management',
+    subService: 'Visitor Log Management',
+    category: 'Security',
+    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
+    location: 'Commercial Complex, Salem',
+    description: 'Digital check-in visitor validation, guest badge issuance, and parking space guidance.'
+  },
+
+  // 02. HOUSEKEEPING SERVICES
+  {
+    id: 'hk-1',
+    title: 'Daily Janitorial Care',
+    subService: 'Daily Janitorial Care',
+    category: 'Housekeeping',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
+    location: 'Corporate HQ, Chennai',
+    description: 'Continuous daily janitorial cleaning, waste bin clearing, and workstation surface care.'
+  },
+  {
+    id: 'hk-2',
+    title: 'Floor Scrubbing & Polishing',
+    subService: 'Floor Scrubbing & Polishing',
+    category: 'Housekeeping',
+    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80',
+    location: 'Industrial Park, Tiruchirappalli',
+    description: 'Heavy-duty mechanized scrubbing, granite crystallization, and diamond pad floor polishing.'
+  },
+  {
+    id: 'hk-3',
+    title: 'Restroom Sanitization',
+    subService: 'Restroom Sanitization',
+    category: 'Housekeeping',
+    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
+    location: 'IT Expressway, Chennai',
+    description: 'Hospitality-grade washroom hygiene maintenance and anti-microbial disinfection.'
+  },
+  {
+    id: 'hk-4',
+    title: 'Eco-friendly Chemicals',
+    subService: 'Eco-friendly Chemicals',
+    category: 'Housekeeping',
+    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80',
+    location: 'Green Tech Hub, Coimbatore',
+    description: 'Non-toxic, bio-degradable cleaning agents protecting indoor air quality and employee health.'
+  },
+
+  // 03. CLEANING & STAFFING SERVICES
+  {
+    id: 'cs-1',
+    title: 'Pantry & Hospitality Attendants',
+    subService: 'Pantry & Hospitality Attendants',
+    category: 'Cleaning & Staffing',
+    image: 'https://images.unsplash.com/photo-1556742049-0a67086a2413?auto=format&fit=crop&w=800&q=80',
+    location: 'Executive Suite, Madurai',
+    description: 'Professional pantry stewards handling executive refreshment service and kitchen upkeep.'
+  },
+  {
+    id: 'cs-2',
+    title: 'Front Desk Receptionists',
+    subService: 'Front Desk Receptionists',
+    category: 'Cleaning & Staffing',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+    location: 'Business Bay, Chennai',
+    description: 'Courteous front-office reception staff managing visitor welcome, call routing, and mail handling.'
+  },
+  {
+    id: 'cs-3',
+    title: 'Office Helpers',
+    subService: 'Office Helpers',
+    category: 'Cleaning & Staffing',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+    location: 'Corporate Center, Salem',
+    description: 'Deputed office boys facilitating meeting room setups, file movements, and errand assistance.'
+  },
+  {
+    id: 'cs-4',
+    title: 'Document Management',
+    subService: 'Document Management',
+    category: 'Cleaning & Staffing',
+    image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=800&q=80',
+    location: 'Legal Hub, Coimbatore',
+    description: 'Systematic physical file indexing, record dispatching, and confidential paper shredding.'
+  },
+
+  // 04. DETECTIVE AGENCY & RISK MANAGEMENT
+  {
+    id: 'det-1',
+    title: 'Employee Background Check',
+    subService: 'Employee Background Check',
+    category: 'Detective Agency',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
+    location: 'Financial Tower, Chennai',
+    description: 'Comprehensive employment history, education, and criminal record verification.'
+  },
+  {
+    id: 'det-2',
+    title: 'Corporate Asset Audit',
+    subService: 'Corporate Asset Audit',
+    category: 'Detective Agency',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+    location: 'Manufacturing Hub, Hosur',
+    description: 'Investigative asset tracking, inventory leakage audit, and intellectual property protection.'
+  },
+  {
+    id: 'det-3',
+    title: 'Discreet Surveillance',
+    subService: 'Discreet Surveillance',
+    category: 'Detective Agency',
+    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
+    location: 'Trade Center, Madurai',
+    description: 'Low-profile field observation, undercover intelligence gathering, and video logging.'
+  },
+  {
+    id: 'det-4',
+    title: 'Risk Mitigations',
+    subService: 'Risk Mitigations',
+    category: 'Detective Agency',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80',
+    location: 'Corporate HQ, Coimbatore',
+    description: 'Executive threat assessment, security vulnerability audit, and fraud prevention strategies.'
+  }
+];
+
+const SERVICE_SECTIONS = [
+  {
+    category: 'Security',
+    title: '01. PROFESSIONAL SECURITY SERVICES',
+    description: '4 Specialized Security & Surveillance Sub-Services'
+  },
+  {
+    category: 'Housekeeping',
+    title: '02. HOSPITALITY HOUSEKEEPING',
+    description: '4 Core Janitorial & Hygiene Maintenance Sub-Services'
+  },
+  {
+    category: 'Cleaning & Staffing',
+    title: '03. CORPORATE OFFICE STAFFING',
+    description: '4 Manpower & Administrative Support Sub-Services'
+  },
+  {
+    category: 'Detective Agency',
+    title: '04. DETECTIVE & RISK MANAGEMENT AGENCY',
+    description: '4 Corporate Intelligence & Background Verification Sub-Services'
   }
 ];
 
@@ -65,11 +192,11 @@ const Gallery: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('All');
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
 
-  const categories = ['All', 'Security', 'Housekeeping', 'Facilities', 'Corporate'];
+  const categories = ['All', 'Security', 'Housekeeping', 'Cleaning & Staffing', 'Detective Agency'];
 
-  const filteredItems = activeTab === 'All'
-    ? GALLERY_DATA
-    : GALLERY_DATA.filter(item => item.category === activeTab);
+  const visibleSections = activeTab === 'All'
+    ? SERVICE_SECTIONS
+    : SERVICE_SECTIONS.filter(sec => sec.category === activeTab);
 
   return (
     <section 
@@ -101,7 +228,7 @@ const Gallery: React.FC = () => {
               marginBottom: '1rem'
             }}
           >
-            <span className="font-technical" style={{ color: '#FFD54F', fontWeight: 800 }}>VISUAL SHOWCASE</span>
+            <span className="font-technical" style={{ color: '#FFD54F', fontWeight: 800 }}>SUB-SERVICES OPERATIONS GALLERY</span>
           </div>
 
           <h1 
@@ -113,11 +240,11 @@ const Gallery: React.FC = () => {
               marginBottom: '1rem'
             }}
           >
-            YELLOW CITY <span style={{ color: 'var(--brand-blue)' }}>OPERATIONS GALLERY</span>
+            4 MAIN SERVICES <span style={{ color: 'var(--brand-blue)' }}>& THEIR 16 SUB-SERVICES</span>
           </h1>
 
-          <p style={{ maxWidth: '800px', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700 }}>
-            Visual proof of our facility management teams in action across 12,000+ satisfied clients. Explore security deployments, housekeeping excellence, deep cleaning, and corporate facility management.
+          <p style={{ maxWidth: '850px', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700 }}>
+            Visual proof of our 4 main service pillars in action. Explore each of the 4 sub-services offered under Professional Security, Hospitality Housekeeping, Corporate Staffing, and Detective Agency.
           </p>
         </div>
 
@@ -156,84 +283,138 @@ const Gallery: React.FC = () => {
           })}
         </div>
 
-        {/* Gallery Grid */}
-        <div 
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
-            gap: '2.5rem'
-          }}
-        >
-          {filteredItems.map((item, idx) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: idx * 0.08 }}
-              onClick={() => setSelectedImage(item)}
-              className="gallery-card-compact"
-              style={{
-                backgroundColor: 'var(--bg-card)',
-                border: '2px solid var(--text-primary)',
-                boxShadow: '6px 6px 0px var(--text-primary)',
-                overflow: 'hidden',
-                cursor: 'pointer',
-                transition: 'transform 0.3s ease'
-              }}
-            >
+        {/* Render 4 Main Service Sections */}
+        {visibleSections.map(sec => {
+          const sectionItems = GALLERY_DATA.filter(item => item.category === sec.category);
+
+          return (
+            <div key={sec.category} style={{ marginBottom: '4rem' }}>
+              {/* Section Header Banner */}
               <div 
-                className="gallery-img-area"
-                style={{ 
-                  height: '240px', 
-                  overflow: 'hidden', 
-                  position: 'relative',
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'baseline',
                   borderBottom: '2px solid var(--text-primary)',
-                  backgroundColor: 'var(--text-primary)'
+                  paddingBottom: '0.75rem',
+                  marginBottom: '2rem',
+                  flexWrap: 'wrap',
+                  gap: '1rem'
                 }}
               >
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    transition: 'transform 0.5s ease'
-                  }}
-                />
+                <div>
+                  <h2 
+                    style={{ 
+                      fontSize: '1.4rem', 
+                      fontFamily: 'var(--font-title)', 
+                      fontWeight: 900, 
+                      color: 'var(--text-primary)',
+                      margin: 0
+                    }}
+                  >
+                    {sec.title}
+                  </h2>
+                  <div className="font-technical" style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 800, marginTop: '0.2rem' }}>
+                    {sec.description}
+                  </div>
+                </div>
                 <div 
-                  className="gallery-category-badge"
                   style={{
-                    position: 'absolute',
-                    top: '12px',
-                    right: '12px',
                     backgroundColor: 'var(--text-primary)',
                     color: '#FFD54F',
-                    padding: '4px 10px',
+                    padding: '4px 12px',
                     fontFamily: 'var(--font-mono)',
                     fontSize: '0.75rem',
-                    fontWeight: 800,
-                    zIndex: 2
+                    fontWeight: 800
                   }}
                 >
-                  {item.category}
+                  4 SUB-SERVICES
                 </div>
               </div>
 
-              <div className="gallery-info-area" style={{ padding: '1.5rem' }}>
-                <div className="font-technical gallery-location-tag" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '0.5rem', fontWeight: 800 }}>
-                  📍 {item.location}
-                </div>
-                <h3 className="gallery-title" style={{ fontSize: '1.25rem', color: 'var(--text-primary)', fontWeight: 800, marginBottom: '0.5rem', lineHeight: '1.3' }}>
-                  {item.title}
-                </h3>
-                <p className="gallery-desc" style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: 700, lineHeight: '1.5', margin: 0 }}>
-                  {item.description}
-                </p>
+              {/* 4 Cards Grid */}
+              <div 
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
+                  gap: '2rem'
+                }}
+              >
+                {sectionItems.map((item, idx) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.08 }}
+                    onClick={() => setSelectedImage(item)}
+                    className="gallery-card-compact"
+                    style={{
+                      backgroundColor: 'var(--bg-card)',
+                      border: '2px solid var(--text-primary)',
+                      boxShadow: '5px 5px 0px var(--text-primary)',
+                      overflow: 'hidden',
+                      cursor: 'pointer',
+                      transition: 'transform 0.3s ease'
+                    }}
+                  >
+                    <div 
+                      className="gallery-img-area"
+                      style={{ 
+                        height: '210px', 
+                        overflow: 'hidden', 
+                        position: 'relative',
+                        borderBottom: '2px solid var(--text-primary)',
+                        backgroundColor: 'var(--text-primary)'
+                      }}
+                    >
+                      <img 
+                        src={item.image} 
+                        alt={item.title} 
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          transition: 'transform 0.5s ease'
+                        }}
+                      />
+                      <div 
+                        className="gallery-category-badge"
+                        style={{
+                          position: 'absolute',
+                          top: '10px',
+                          right: '10px',
+                          backgroundColor: '#FFD54F',
+                          color: 'var(--text-primary)',
+                          padding: '3px 8px',
+                          fontFamily: 'var(--font-mono)',
+                          fontSize: '0.7rem',
+                          fontWeight: 800,
+                          zIndex: 2,
+                          border: '1px solid var(--text-primary)'
+                        }}
+                      >
+                        ✓ SUB-SERVICE {idx + 1}
+                      </div>
+                    </div>
+
+                    <div className="gallery-info-area" style={{ padding: '1.25rem' }}>
+                      <div className="font-technical gallery-location-tag" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '0.4rem', fontWeight: 800 }}>
+                        📍 {item.location}
+                      </div>
+                      <h3 className="gallery-title" style={{ fontSize: '1.1rem', color: 'var(--text-primary)', fontWeight: 800, marginBottom: '0.5rem', lineHeight: '1.3' }}>
+                        ✓ {item.subService}
+                      </h3>
+                      <p className="gallery-desc" style={{ fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 700, lineHeight: '1.4', margin: 0 }}>
+                        {item.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          );
+        })}
 
         {/* Lightbox Modal */}
         {selectedImage && (
@@ -302,7 +483,7 @@ const Gallery: React.FC = () => {
                 />
               </div>
               <span className="font-technical" style={{ fontWeight: 800, color: 'var(--brand-blue)' }}>{selectedImage.category} • {selectedImage.location}</span>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 900, marginTop: '0.5rem', color: 'var(--text-primary)' }}>{selectedImage.title}</h2>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 900, marginTop: '0.5rem', color: 'var(--text-primary)' }}>✓ {selectedImage.subService}</h2>
               <p style={{ fontSize: '1rem', fontWeight: 700, marginTop: '0.5rem', color: 'var(--text-primary)' }}>{selectedImage.description}</p>
             </div>
           </div>
