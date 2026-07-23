@@ -15,7 +15,7 @@ const GALLERY_DATA: GalleryItem[] = [
     id: '1',
     title: '24/7 Corporate Guarding Force',
     category: 'Security',
-    image: '/assets/service_security.png',
+    image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80',
     location: 'IT Park, Chennai',
     description: 'Vetted uniformed security personnel carrying out round-the-clock perimeter surveillance and access control.'
   },
@@ -23,7 +23,7 @@ const GALLERY_DATA: GalleryItem[] = [
     id: '2',
     title: 'Hospitality Housekeeping Operations',
     category: 'Housekeeping',
-    image: '/assets/service_housekeeping.png',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
     location: 'Commercial Tower, Coimbatore',
     description: 'Hospitality-grade daily janitorial and sanitization operations for executive office spaces.'
   },
@@ -31,7 +31,7 @@ const GALLERY_DATA: GalleryItem[] = [
     id: '3',
     title: 'Corporate Investigation & Risk Management',
     category: 'Corporate',
-    image: '/assets/service_detective.png',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
     location: 'Financial Hub, Madurai',
     description: 'Discreet background verification and corporate risk surveillance carried out by senior operatives.'
   },
@@ -39,7 +39,7 @@ const GALLERY_DATA: GalleryItem[] = [
     id: '4',
     title: 'Deep Sanitation & Upholstery Cleaning',
     category: 'Housekeeping',
-    image: '/assets/service_cleaning.png',
+    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80',
     location: 'Tech Campus, Salem',
     description: 'Heavy-duty machine scrubbing and chemical disinfection of high-traffic commercial flooring.'
   },
@@ -47,7 +47,7 @@ const GALLERY_DATA: GalleryItem[] = [
     id: '5',
     title: 'Industrial MEP & HVAC System Audits',
     category: 'Facilities',
-    image: '/assets/hero_bg.png',
+    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
     location: 'Manufacturing Hub, Tiruchirappalli',
     description: 'Electro-mechanical technicians maintaining central air conditioning, power backup, and plumbing networks.'
   },
@@ -55,7 +55,7 @@ const GALLERY_DATA: GalleryItem[] = [
     id: '6',
     title: 'Event Security & VIP Escort Bouncers',
     category: 'Security',
-    image: '/assets/service_security.png',
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
     location: 'Convention Center, Chennai',
     description: 'Tactical security bouncers managing crowd entry, VIP movement, and event parking flow.'
   }
@@ -188,23 +188,19 @@ const Gallery: React.FC = () => {
                   overflow: 'hidden', 
                   position: 'relative',
                   borderBottom: '2px solid var(--text-primary)',
-                  backgroundColor: '#FFB300',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
+                  backgroundColor: 'var(--text-primary)'
                 }}
               >
-                <span 
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
                   style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '0.9rem',
-                    color: 'var(--text-primary)',
-                    letterSpacing: '0.1em',
-                    fontWeight: 800
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    transition: 'transform 0.5s ease'
                   }}
-                >
-                  image
-                </span>
+                />
                 <div 
                   className="gallery-category-badge"
                   style={{
@@ -216,7 +212,8 @@ const Gallery: React.FC = () => {
                     padding: '4px 10px',
                     fontFamily: 'var(--font-mono)',
                     fontSize: '0.75rem',
-                    fontWeight: 800
+                    fontWeight: 800,
+                    zIndex: 2
                   }}
                 >
                   {item.category}
@@ -278,7 +275,8 @@ const Gallery: React.FC = () => {
                   fontWeight: 800,
                   width: '36px',
                   height: '36px',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  zIndex: 10
                 }}
               >
                 ✕
@@ -287,25 +285,21 @@ const Gallery: React.FC = () => {
                 style={{ 
                   width: '100%', 
                   height: '350px', 
-                  backgroundColor: '#FFB300', 
+                  overflow: 'hidden',
                   border: '2px solid var(--text-primary)', 
                   marginBottom: '1.5rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
+                  backgroundColor: 'var(--text-primary)'
                 }}
               >
-                <span 
+                <img 
+                  src={selectedImage.image} 
+                  alt={selectedImage.title} 
                   style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '1rem',
-                    color: 'var(--text-primary)',
-                    letterSpacing: '0.1em',
-                    fontWeight: 900
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
                   }}
-                >
-                  image
-                </span>
+                />
               </div>
               <span className="font-technical" style={{ fontWeight: 800, color: 'var(--brand-blue)' }}>{selectedImage.category} • {selectedImage.location}</span>
               <h2 style={{ fontSize: '1.5rem', fontWeight: 900, marginTop: '0.5rem', color: 'var(--text-primary)' }}>{selectedImage.title}</h2>

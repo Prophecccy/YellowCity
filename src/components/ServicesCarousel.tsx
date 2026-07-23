@@ -33,7 +33,7 @@ const ServicesCarousel: React.FC = () => {
         '24/7 command room route-tracking dispatch',
         'Corporate estate asset monitoring & response'
       ],
-      image: '/assets/service_security.png'
+      image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80'
     },
     {
       num: '02',
@@ -45,7 +45,7 @@ const ServicesCarousel: React.FC = () => {
         'Professional pantry hostess & stewards styling',
         'Guesthouse operations & executive cleaning'
       ],
-      image: '/assets/service_housekeeping.png'
+      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80'
     },
     {
       num: '03',
@@ -57,7 +57,7 @@ const ServicesCarousel: React.FC = () => {
         'Marble crystallization & diamond pad buffing',
         'Structural facade glass & high-rise cleaning'
       ],
-      image: '/assets/service_cleaning.png'
+      image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80'
     },
     {
       num: '04',
@@ -69,7 +69,7 @@ const ServicesCarousel: React.FC = () => {
         'High-fidelity surveillance & photography logs',
         'Asset searches, theft reviews & court evidence'
       ],
-      image: '/assets/service_detective.png'
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'
     }
   ];
 

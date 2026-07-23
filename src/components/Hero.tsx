@@ -53,7 +53,7 @@ const Hero = () => {
           right: 0,
           width: '55%',
           height: '100%',
-          backgroundImage: 'url(/assets/hero_bg.png)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80)',
           backgroundSize: 'cover',
           backgroundPosition: 'center right',
           opacity: 0.12,

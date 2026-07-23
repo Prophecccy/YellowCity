@@ -8,6 +8,7 @@ export interface ServiceItem {
   category: string;
   description: string;
   icon: string;
+  image: string;
   features: string[];
 }
 
@@ -19,6 +20,7 @@ export const ALL_SERVICES: ServiceItem[] = [
     category: 'Protection & Surveillance',
     description: 'Vetted, uniformed security officers, gate control experts, and automated surveillance teams protecting commercial complexes and residential communities.',
     icon: '🛡️',
+    image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80',
     features: ['Armed & Unarmed Guarding', '24/7 Access Control', 'CCTV Monitoring', 'Visitor Log Management']
   },
   {
@@ -28,6 +30,7 @@ export const ALL_SERVICES: ServiceItem[] = [
     category: 'Sanitation & Hygiene',
     description: 'Hospitality-grade housekeeping staff delivering daily cleaning, floor care, hygiene maintenance, and continuous facility upkeep.',
     icon: '🧹',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
     features: ['Daily Janitorial Care', 'Floor Scrubbing & Polishing', 'Restroom Sanitization', 'Eco-friendly Chemicals']
   },
   {
@@ -37,6 +40,7 @@ export const ALL_SERVICES: ServiceItem[] = [
     category: 'Manpower Solutions',
     description: 'Deputing office boys, reception attendants, pantry managers, and administrative support personnel to streamline daily office operations.',
     icon: '👔',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
     features: ['Pantry & Hospitality Attendants', 'Front Desk Receptionists', 'Office Helpers', 'Document Management']
   },
   {
@@ -46,6 +50,7 @@ export const ALL_SERVICES: ServiceItem[] = [
     category: 'Corporate Intelligence',
     description: 'Confidential background verification, corporate asset surveillance, fraud prevention, and discreet risk assessment services.',
     icon: '🔍',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
     features: ['Employee Background Check', 'Corporate Asset Audit', 'Discreet Surveillance', 'Risk Mitigations']
   }
 ];
