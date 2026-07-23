@@ -8,7 +8,6 @@ export interface GalleryItem {
   image: string;
   location: string;
   description: string;
-  subService: string;
 }
 
 const GALLERY_DATA: GalleryItem[] = [
@@ -16,7 +15,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'sec-1',
     title: 'Armed & Unarmed Guarding',
-    subService: 'Armed & Unarmed Guarding',
     category: 'Security',
     image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
     location: 'IT Park, Chennai',
@@ -25,7 +23,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'sec-2',
     title: '24/7 Access Control',
-    subService: '24/7 Access Control',
     category: 'Security',
     image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80',
     location: 'Tech Tower, Coimbatore',
@@ -34,7 +31,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'sec-3',
     title: 'CCTV Monitoring',
-    subService: 'CCTV Monitoring',
     category: 'Security',
     image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
     location: 'Financial Hub, Madurai',
@@ -43,7 +39,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'sec-4',
     title: 'Visitor Log Management',
-    subService: 'Visitor Log Management',
     category: 'Security',
     image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
     location: 'Commercial Complex, Salem',
@@ -54,7 +49,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'hk-1',
     title: 'Daily Janitorial Care',
-    subService: 'Daily Janitorial Care',
     category: 'Housekeeping',
     image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
     location: 'Corporate HQ, Chennai',
@@ -63,7 +57,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'hk-2',
     title: 'Floor Scrubbing & Polishing',
-    subService: 'Floor Scrubbing & Polishing',
     category: 'Housekeeping',
     image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80',
     location: 'Industrial Park, Tiruchirappalli',
@@ -72,7 +65,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'hk-3',
     title: 'Restroom Sanitization',
-    subService: 'Restroom Sanitization',
     category: 'Housekeeping',
     image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
     location: 'IT Expressway, Chennai',
@@ -81,7 +73,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'hk-4',
     title: 'Eco-friendly Chemicals',
-    subService: 'Eco-friendly Chemicals',
     category: 'Housekeeping',
     image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80',
     location: 'Green Tech Hub, Coimbatore',
@@ -92,16 +83,14 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'cs-1',
     title: 'Pantry & Hospitality Attendants',
-    subService: 'Pantry & Hospitality Attendants',
     category: 'Cleaning & Staffing',
-    image: 'https://images.unsplash.com/photo-1556742049-0a67086a2413?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=800&q=80',
     location: 'Executive Suite, Madurai',
     description: 'Professional pantry stewards handling executive refreshment service and kitchen upkeep.'
   },
   {
     id: 'cs-2',
     title: 'Front Desk Receptionists',
-    subService: 'Front Desk Receptionists',
     category: 'Cleaning & Staffing',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
     location: 'Business Bay, Chennai',
@@ -110,7 +99,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'cs-3',
     title: 'Office Helpers',
-    subService: 'Office Helpers',
     category: 'Cleaning & Staffing',
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
     location: 'Corporate Center, Salem',
@@ -119,7 +107,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'cs-4',
     title: 'Document Management',
-    subService: 'Document Management',
     category: 'Cleaning & Staffing',
     image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=800&q=80',
     location: 'Legal Hub, Coimbatore',
@@ -130,7 +117,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'det-1',
     title: 'Employee Background Check',
-    subService: 'Employee Background Check',
     category: 'Detective Agency',
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
     location: 'Financial Tower, Chennai',
@@ -139,7 +125,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'det-2',
     title: 'Corporate Asset Audit',
-    subService: 'Corporate Asset Audit',
     category: 'Detective Agency',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
     location: 'Manufacturing Hub, Hosur',
@@ -148,7 +133,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'det-3',
     title: 'Discreet Surveillance',
-    subService: 'Discreet Surveillance',
     category: 'Detective Agency',
     image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
     location: 'Trade Center, Madurai',
@@ -157,7 +141,6 @@ const GALLERY_DATA: GalleryItem[] = [
   {
     id: 'det-4',
     title: 'Risk Mitigations',
-    subService: 'Risk Mitigations',
     category: 'Detective Agency',
     image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80',
     location: 'Corporate HQ, Coimbatore',
@@ -169,22 +152,22 @@ const SERVICE_SECTIONS = [
   {
     category: 'Security',
     title: '01. PROFESSIONAL SECURITY SERVICES',
-    description: '4 Specialized Security & Surveillance Sub-Services'
+    description: '4 Key Security & Surveillance Operational Deployments'
   },
   {
     category: 'Housekeeping',
     title: '02. HOSPITALITY HOUSEKEEPING',
-    description: '4 Core Janitorial & Hygiene Maintenance Sub-Services'
+    description: '4 Core Janitorial & Hygiene Maintenance Operations'
   },
   {
     category: 'Cleaning & Staffing',
     title: '03. CORPORATE OFFICE STAFFING',
-    description: '4 Manpower & Administrative Support Sub-Services'
+    description: '4 Dedicated Manpower & Administrative Support Solutions'
   },
   {
     category: 'Detective Agency',
     title: '04. DETECTIVE & RISK MANAGEMENT AGENCY',
-    description: '4 Corporate Intelligence & Background Verification Sub-Services'
+    description: '4 Corporate Intelligence & Background Verification Operations'
   }
 ];
 
@@ -228,7 +211,7 @@ const Gallery: React.FC = () => {
               marginBottom: '1rem'
             }}
           >
-            <span className="font-technical" style={{ color: '#FFD54F', fontWeight: 800 }}>SUB-SERVICES OPERATIONS GALLERY</span>
+            <span className="font-technical" style={{ color: '#FFD54F', fontWeight: 800 }}>OPERATIONS GALLERY</span>
           </div>
 
           <h1 
@@ -240,11 +223,11 @@ const Gallery: React.FC = () => {
               marginBottom: '1rem'
             }}
           >
-            4 MAIN SERVICES <span style={{ color: 'var(--brand-blue)' }}>& THEIR 16 SUB-SERVICES</span>
+            4 MAIN SERVICES <span style={{ color: 'var(--brand-blue)' }}>OPERATIONAL SHOWCASE</span>
           </h1>
 
           <p style={{ maxWidth: '850px', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700 }}>
-            Visual proof of our 4 main service pillars in action. Explore each of the 4 sub-services offered under Professional Security, Hospitality Housekeeping, Corporate Staffing, and Detective Agency.
+            Visual proof of our 4 main service pillars in action across 12,000+ satisfied clients. Explore operations under Professional Security, Hospitality Housekeeping, Corporate Staffing, and Detective Agency.
           </p>
         </div>
 
@@ -328,7 +311,7 @@ const Gallery: React.FC = () => {
                     fontWeight: 800
                   }}
                 >
-                  4 SUB-SERVICES
+                  4 SERVICES
                 </div>
               </div>
 
@@ -394,7 +377,7 @@ const Gallery: React.FC = () => {
                           border: '1px solid var(--text-primary)'
                         }}
                       >
-                        ✓ SUB-SERVICE {idx + 1}
+                        {item.category}
                       </div>
                     </div>
 
@@ -403,7 +386,7 @@ const Gallery: React.FC = () => {
                         📍 {item.location}
                       </div>
                       <h3 className="gallery-title" style={{ fontSize: '1.1rem', color: 'var(--text-primary)', fontWeight: 800, marginBottom: '0.5rem', lineHeight: '1.3' }}>
-                        ✓ {item.subService}
+                        {item.title}
                       </h3>
                       <p className="gallery-desc" style={{ fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 700, lineHeight: '1.4', margin: 0 }}>
                         {item.description}
@@ -483,7 +466,7 @@ const Gallery: React.FC = () => {
                 />
               </div>
               <span className="font-technical" style={{ fontWeight: 800, color: 'var(--brand-blue)' }}>{selectedImage.category} • {selectedImage.location}</span>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 900, marginTop: '0.5rem', color: 'var(--text-primary)' }}>✓ {selectedImage.subService}</h2>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 900, marginTop: '0.5rem', color: 'var(--text-primary)' }}>{selectedImage.title}</h2>
               <p style={{ fontSize: '1rem', fontWeight: 700, marginTop: '0.5rem', color: 'var(--text-primary)' }}>{selectedImage.description}</p>
             </div>
           </div>
