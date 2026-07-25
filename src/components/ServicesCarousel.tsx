@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { HousekeepingVisual, CleaningVisual } from './ServiceVisual';
+// Services Carousel Component
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -132,15 +132,6 @@ const ServicesCarousel: React.FC = () => {
     if (scrollProgress <= start) return 0;
     if (scrollProgress >= end) return 100;
     
-    return ((scrollProgress - start) / stepFraction) * 100;
-  };
-
-  const renderAnimatedVisual = (idx: number) => {
-    switch (idx) {
-      case 0: return <CleaningVisual />;
-      case 1: return <HousekeepingVisual />;
-      default: return null;
-    }
   };
 
   return (
@@ -330,8 +321,8 @@ const ServicesCarousel: React.FC = () => {
                   zIndex: active ? 5 : 1
                 }}
               >
-                {/* Left Text Segment */}
-                <div style={{ flex: 1.2, display: 'flex', flexDirection: 'column', gap: '1.25rem', width: '100%' }}>
+                {/* Main Text Segment */}
+                <div style={{ width: '100%', maxWidth: '850px', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                   <div className="font-technical" style={{ fontWeight: 600 }}>
                     {service.specs}
                   </div>
@@ -340,21 +331,22 @@ const ServicesCarousel: React.FC = () => {
                     {service.title}
                   </h3>
                   
-                  <p style={{ fontSize: '1.05rem', color: 'var(--text-muted)' }}>
+                  <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', maxWidth: '750px', lineHeight: '1.6' }}>
                     {service.description}
                   </p>
 
-                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '1rem' }}>
+                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem', marginTop: '1rem' }}>
                     {service.bullets.map((bullet, bIdx) => (
                       <li 
                         key={bIdx}
                         style={{
                           fontFamily: 'var(--font-mono)',
-                          fontSize: '0.85rem',
+                          fontSize: '0.9rem',
                           color: 'var(--text-primary)',
                           display: 'flex',
                           alignItems: 'center',
-                          gap: '10px'
+                          gap: '10px',
+                          fontWeight: 700
                         }}
                       >
                         <span style={{ color: 'var(--brand-blue)', fontWeight: 'bold' }}>↳</span> {bullet}
@@ -369,52 +361,6 @@ const ServicesCarousel: React.FC = () => {
                   >
                     <span>{isMobile ? 'Get Proposal' : 'Get Operational Proposal'}</span>
                   </a>
-                </div>
-
-                {/* Right Segment: Graphic Panel containing Custom SVG Visuals */}
-                <div 
-                  style={{ 
-                    flex: 0.8,
-                    width: '100%',
-                    position: 'relative',
-                    aspectRatio: '1',
-                    border: '1px solid var(--grid-line)',
-                    padding: '12px',
-                    backgroundColor: 'var(--bg-card)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    boxShadow: '0 10px 40px rgba(0,0,0,0.03)'
-                  }}
-                >
-                  {/* Layer custom animated SVG in the background/foreground */}
-                  <div 
-                    style={{ 
-                      position: 'absolute', 
-                      inset: 0, 
-                      zIndex: 2, 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      justifyContent: 'center' 
-                    }}
-                  >
-                    {renderAnimatedVisual(idx)}
-                  </div>
-
-                  {/* Soft background illustration */}
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      filter: 'grayscale(100%) opacity(12%) contrast(110%)',
-                      mixBlendMode: 'luminosity',
-                      pointerEvents: 'none',
-                      zIndex: 1
-                    }}
-                  />
                 </div>
               </div>
             );
