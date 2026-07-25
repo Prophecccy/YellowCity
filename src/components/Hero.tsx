@@ -160,7 +160,7 @@ const Hero = () => {
                 width: '100%'
               }}
             >
-              <a href="#services" className="btn-draft btn-draft-accent" style={{ fontWeight: 800, borderRadius: '9999px' }}>
+              <a href="#gallery" className="btn-draft btn-draft-accent" style={{ fontWeight: 800, borderRadius: '9999px' }}>
                 <span>Explore All Services</span>
               </a>
               <a href="#contact" className="btn-draft" style={{ fontWeight: 800, borderRadius: '9999px' }}>
