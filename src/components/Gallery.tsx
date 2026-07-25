@@ -29,42 +29,42 @@ const GALLERY_DATA: GalleryItem[] = [
     id: 'cl-3',
     title: 'Floor Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop&w=800&q=80',
     description: 'Mechanized scrubbing, stain removal, and deep floor restoration for commercial spaces.'
   },
   {
     id: 'cl-4',
     title: 'Commercial Place Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=800&q=80',
     description: 'Heavy-duty sanitization and daily maintenance for shopping centers, showrooms, and retail venues.'
   },
   {
     id: 'cl-5',
     title: 'Water Tank Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=800&q=80',
     description: 'Hygienic sludge removal, high-pressure washing, and anti-bacterial disinfection of water storage tanks.'
   },
   {
     id: 'cl-6',
     title: 'Glass Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80',
     description: 'Streak-free window washing and facade glass cleaning for commercial towers and homes.'
   },
   {
     id: 'cl-7',
     title: 'Tiles, Marbles & Mosaic Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80',
     description: 'Granite crystallization, marble polishing, tile grout cleaning, and mosaic floor buffing.'
   },
   {
     id: 'cl-8',
     title: 'Name Board Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80',
     description: 'Exterior brand sign board washing, LED acrylic logo cleaning, and high-reach panel restoration.'
   },
 
