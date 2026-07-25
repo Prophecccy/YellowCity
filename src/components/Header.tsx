@@ -53,8 +53,11 @@ const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate }) => 
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          height: scrolled ? '75px' : '95px',
-          transition: 'height 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+          minHeight: scrolled ? '75px' : '85px',
+          height: 'auto',
+          paddingTop: '8px',
+          paddingBottom: '8px',
+          transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
       >
         {/* Brand Logo & Name */}
@@ -64,30 +67,48 @@ const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate }) => 
           style={{ 
             display: 'flex', 
             alignItems: 'center', 
-            gap: '12px',
-            paddingRight: '1rem'
+            gap: '10px',
+            paddingRight: '0.5rem',
+            textDecoration: 'none'
           }}
         >
           <img 
             src="/Yellow_City_logo.png" 
             alt="Yellow City Logo" 
-            style={{ width: '45px', height: '45px', objectFit: 'contain' }} 
+            style={{ 
+              width: 'clamp(34px, 7vw, 45px)', 
+              height: 'clamp(34px, 7vw, 45px)', 
+              objectFit: 'contain',
+              flexShrink: 0 
+            }} 
           />
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
             <span style={{ 
               fontFamily: 'var(--font-title)', 
-              fontSize: '1.5rem', 
+              fontSize: 'clamp(1.1rem, 3.8vw, 1.5rem)', 
               color: 'var(--text-primary)',
               letterSpacing: '-0.02em',
-              lineHeight: '1.1',
+              lineHeight: '1.05',
               fontWeight: 900
             }}>
               YELLOW CITY
             </span>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 900, letterSpacing: '0.01em', marginTop: '1px' }}>
+            <span style={{ 
+              fontSize: 'clamp(0.68rem, 2.2vw, 0.82rem)', 
+              color: 'var(--text-primary)', 
+              fontWeight: 900, 
+              letterSpacing: '0.01em',
+              lineHeight: '1.1'
+            }}>
               Yellow City Private Limited
             </span>
-            <span className="font-technical" style={{ fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 800, textTransform: 'uppercase' }}>
+            <span className="font-technical" style={{ 
+              fontSize: 'clamp(0.55rem, 1.8vw, 0.65rem)', 
+              color: 'var(--text-muted)', 
+              fontWeight: 800, 
+              textTransform: 'uppercase',
+              lineHeight: '1.1'
+            }}>
               Housekeeping & Cleaning Services
             </span>
           </div>
