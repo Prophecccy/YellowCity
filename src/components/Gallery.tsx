@@ -36,35 +36,35 @@ const GALLERY_DATA: GalleryItem[] = [
     id: 'cl-4',
     title: 'Commercial Place Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=800&q=80',
     description: 'Heavy-duty sanitization and daily maintenance for shopping centers, showrooms, and retail venues.'
   },
   {
     id: 'cl-5',
     title: 'Water Tank Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1584467735815-f778f274e296?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80',
     description: 'Hygienic sludge removal, high-pressure washing, and anti-bacterial disinfection of water storage tanks.'
   },
   {
     id: 'cl-6',
     title: 'Glass Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80',
     description: 'Streak-free window washing and facade glass cleaning for commercial towers and homes.'
   },
   {
     id: 'cl-7',
     title: 'Tiles, Marbles & Mosaic Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80',
     description: 'Granite crystallization, marble polishing, tile grout cleaning, and mosaic floor buffing.'
   },
   {
     id: 'cl-8',
     title: 'Name Board Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=800&q=80',
     description: 'Exterior brand sign board washing, LED acrylic logo cleaning, and high-reach panel restoration.'
   },
 
