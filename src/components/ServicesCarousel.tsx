@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SecurityVisual, HousekeepingVisual, CleaningVisual, DetectiveVisual } from './ServiceVisual';
+import { HousekeepingVisual, CleaningVisual } from './ServiceVisual';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,14 +66,15 @@ const ServicesCarousel: React.FC = () => {
       const pinTrigger = ScrollTrigger.create({
         trigger: triggerRef.current,
         start: 'top top',
-        end: '+=2500', // Scroll depth for pinning
+        end: '+=1200', // Scroll depth tuned for 2 service slides
         pin: true,
         scrub: true,
         onUpdate: (self) => {
           setScrollProgress(self.progress);
           
-          // Map progress (0 to 1) to active index (0 to 3)
-          const index = Math.floor(self.progress * 3.99);
+          // Map progress (0 to 1) to active index (0 to 1)
+          const numServices = services.length;
+          const index = Math.min(Math.floor(self.progress * numServices), numServices - 1);
           setActiveIndex(index);
         }
       });
@@ -84,7 +85,7 @@ const ServicesCarousel: React.FC = () => {
     }, triggerRef);
 
     return () => ctx.revert();
-  }, [isMobile]);
+  }, [isMobile, services.length]);
 
   // Click handler to scroll the viewport to the corresponding section coordinate
   const handleTabClick = (idx: number) => {
@@ -101,7 +102,9 @@ const ServicesCarousel: React.FC = () => {
       const start = trigger.start;
       const end = trigger.end;
       const totalScroll = end - start;
-      const targetScroll = start + (idx / 3) * totalScroll + 1; // plus 1px offset to anchor firmly
+      const numServices = services.length;
+      const stepFraction = numServices > 1 ? 1 / (numServices - 1) : 0;
+      const targetScroll = start + idx * stepFraction * totalScroll + 1;
       
       // Use global Lenis scroll if available, fallback to window.scrollTo
       if ((window as any).lenis) {
@@ -115,27 +118,27 @@ const ServicesCarousel: React.FC = () => {
     }
   };
 
-  // Calculate slide progress relative to its segment (0.25 duration per slide)
+  // Calculate slide progress relative to its segment
   const getSlideProgress = (idx: number) => {
     if (isMobile) {
       return activeIndex === idx ? 100 : 0;
     }
 
-    const start = idx * 0.25;
-    const end = (idx + 1) * 0.25;
+    const numServices = services.length;
+    const stepFraction = 1 / numServices;
+    const start = idx * stepFraction;
+    const end = (idx + 1) * stepFraction;
 
     if (scrollProgress <= start) return 0;
     if (scrollProgress >= end) return 100;
     
-    return ((scrollProgress - start) / 0.25) * 100;
+    return ((scrollProgress - start) / stepFraction) * 100;
   };
 
   const renderAnimatedVisual = (idx: number) => {
     switch (idx) {
-      case 0: return <SecurityVisual />;
+      case 0: return <CleaningVisual />;
       case 1: return <HousekeepingVisual />;
-      case 2: return <CleaningVisual />;
-      case 3: return <DetectiveVisual />;
       default: return null;
     }
   };
