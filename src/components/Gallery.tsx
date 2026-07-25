@@ -15,56 +15,56 @@ const GALLERY_DATA: GalleryItem[] = [
     id: 'cl-1',
     title: 'Home Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
+    image: '/services/home-cleaning.jpg',
     description: 'Deep residential cleaning, room dusting, kitchen sanitization, and furniture upkeep.'
   },
   {
     id: 'cl-2',
     title: 'Office Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80',
+    image: '/services/office-cleaning.jpg',
     description: 'Daily workspace janitorial maintenance, desk sanitization, and office floor care.'
   },
   {
     id: 'cl-3',
     title: 'Floor Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop&w=800&q=80',
+    image: '/services/floor-cleaning.jpg',
     description: 'Mechanized scrubbing, stain removal, and deep floor restoration for commercial spaces.'
   },
   {
     id: 'cl-4',
     title: 'Commercial Place Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=800&q=80',
+    image: '/services/commercial-cleaning.jpg',
     description: 'Heavy-duty sanitization and daily maintenance for shopping centers, showrooms, and retail venues.'
   },
   {
     id: 'cl-5',
     title: 'Water Tank Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=800&q=80',
+    image: '/services/water-tank-cleaning.jpg',
     description: 'Hygienic sludge removal, high-pressure washing, and anti-bacterial disinfection of water storage tanks.'
   },
   {
     id: 'cl-6',
     title: 'Glass Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=800&q=80',
+    image: '/services/glass-cleaning.jpg',
     description: 'Streak-free window washing and facade glass cleaning for commercial towers and homes.'
   },
   {
     id: 'cl-7',
     title: 'Tiles, Marbles & Mosaic Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    image: '/services/tiles-marble-cleaning.jpg',
     description: 'Granite crystallization, marble polishing, tile grout cleaning, and mosaic floor buffing.'
   },
   {
     id: 'cl-8',
     title: 'Name Board Cleaning',
     category: 'Cleaning Services',
-    image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=800&q=80',
+    image: '/services/name-board-cleaning.jpg',
     description: 'Exterior brand sign board washing, LED acrylic logo cleaning, and high-reach panel restoration.'
   },
 
@@ -73,21 +73,21 @@ const GALLERY_DATA: GalleryItem[] = [
     id: 'hk-1',
     title: 'Commercial Place Maintenance',
     category: 'Housekeeping Services',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+    image: '/services/commercial-maintenance.jpg',
     description: 'Comprehensive daily housekeeping, facility upkeep, and staff deputation for commercial complexes.'
   },
   {
     id: 'hk-2',
     title: 'Hospitals Cleaning Maintenance',
     category: 'Housekeeping Services',
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80',
+    image: '/services/hospital-maintenance.jpg',
     description: 'Medical-grade anti-bacterial hygiene maintenance, ward sanitization, and sterile hospital housekeeping.'
   },
   {
     id: 'hk-3',
     title: 'Schools Cleaning Maintenance',
     category: 'Housekeeping Services',
-    image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80',
+    image: '/services/school-maintenance.jpg',
     description: 'Campus facility housekeeping, classroom sanitation, restroom hygiene, and playground maintenance.'
   }
 ];
