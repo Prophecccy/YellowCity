@@ -76,19 +76,19 @@ const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate }) => 
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span style={{ 
               fontFamily: 'var(--font-title)', 
-              fontSize: '1.3rem', 
+              fontSize: '1.5rem', 
               color: 'var(--text-primary)',
               letterSpacing: '-0.02em',
               lineHeight: '1.1',
-              fontWeight: 800
+              fontWeight: 900
             }}>
               YELLOW CITY
             </span>
-            <span style={{ fontSize: '0.65rem', color: 'var(--text-primary)', fontWeight: 800, letterSpacing: '0.02em' }}>
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 900, letterSpacing: '0.01em', marginTop: '1px' }}>
               Yellow City Private Limited
             </span>
-            <span className="font-technical" style={{ fontSize: '0.6rem', color: 'var(--text-muted)', fontWeight: 700 }}>
-              Facility Management Service
+            <span className="font-technical" style={{ fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 800, textTransform: 'uppercase' }}>
+              Housekeeping & Cleaning Services
             </span>
           </div>
         </a>

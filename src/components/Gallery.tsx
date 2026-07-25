@@ -4,153 +4,104 @@ import { motion } from 'framer-motion';
 export interface GalleryItem {
   id: string;
   title: string;
-  category: 'Security' | 'Housekeeping' | 'Cleaning & Staffing' | 'Detective Agency';
+  category: 'Cleaning Services' | 'Housekeeping Services';
   image: string;
   description: string;
 }
 
 const GALLERY_DATA: GalleryItem[] = [
-  // 01. SECURITY SERVICES
+  // 01. CLEANING SERVICES (8 Services)
   {
-    id: 'sec-1',
-    title: 'Armed & Unarmed Guarding',
-    category: 'Security',
-    image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
-    description: 'Vetted uniformed security officers carrying out physical guarding and gate duty.'
+    id: 'cl-1',
+    title: 'Home Cleaning',
+    category: 'Cleaning Services',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
+    description: 'Deep residential cleaning, room dusting, kitchen sanitization, and furniture upkeep.'
   },
   {
-    id: 'sec-2',
-    title: '24/7 Access Control',
-    category: 'Security',
-    image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80',
-    description: 'Round-the-clock entry gate management, biometric badge checks, and perimeter logging.'
+    id: 'cl-2',
+    title: 'Office Cleaning',
+    category: 'Cleaning Services',
+    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80',
+    description: 'Daily workspace janitorial maintenance, desk sanitization, and office floor care.'
   },
   {
-    id: 'sec-3',
-    title: 'CCTV Monitoring',
-    category: 'Security',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
-    description: 'High-definition video surveillance command desk actively scanning corporate premises.'
+    id: 'cl-3',
+    title: 'Floor Cleaning',
+    category: 'Cleaning Services',
+    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
+    description: 'Mechanized scrubbing, stain removal, and deep floor restoration for commercial spaces.'
   },
   {
-    id: 'sec-4',
-    title: 'Visitor Log Management',
-    category: 'Security',
-    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
-    description: 'Digital check-in visitor validation, guest badge issuance, and parking space guidance.'
+    id: 'cl-4',
+    title: 'Commercial Place Cleaning',
+    category: 'Cleaning Services',
+    image: 'https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=800&q=80',
+    description: 'Heavy-duty sanitization and daily maintenance for shopping centers, showrooms, and retail venues.'
+  },
+  {
+    id: 'cl-5',
+    title: 'Water Tank Cleaning',
+    category: 'Cleaning Services',
+    image: 'https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=800&q=80',
+    description: 'Hygienic sludge removal, high-pressure washing, and anti-bacterial disinfection of water storage tanks.'
+  },
+  {
+    id: 'cl-6',
+    title: 'Glass Cleaning',
+    category: 'Cleaning Services',
+    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80',
+    description: 'Streak-free window washing and facade glass cleaning for commercial towers and homes.'
+  },
+  {
+    id: 'cl-7',
+    title: 'Tiles, Marbles & Mosaic Cleaning',
+    category: 'Cleaning Services',
+    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80',
+    description: 'Granite crystallization, marble polishing, tile grout cleaning, and mosaic floor buffing.'
+  },
+  {
+    id: 'cl-8',
+    title: 'Name Board Cleaning',
+    category: 'Cleaning Services',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    description: 'Exterior brand sign board washing, LED acrylic logo cleaning, and high-reach panel restoration.'
   },
 
-  // 02. HOUSEKEEPING SERVICES
+  // 02. HOUSEKEEPING SERVICES (3 Services)
   {
     id: 'hk-1',
-    title: 'Daily Janitorial Care',
-    category: 'Housekeeping',
-    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
-    description: 'Continuous daily janitorial cleaning, waste bin clearing, and workstation surface care.'
+    title: 'Commercial Place Maintenance',
+    category: 'Housekeeping Services',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+    description: 'Comprehensive daily housekeeping, facility upkeep, and staff deputation for commercial complexes.'
   },
   {
     id: 'hk-2',
-    title: 'Floor Scrubbing & Polishing',
-    category: 'Housekeeping',
-    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80',
-    description: 'Heavy-duty mechanized scrubbing, granite crystallization, and diamond pad floor polishing.'
+    title: 'Hospitals Cleaning Maintenance',
+    category: 'Housekeeping Services',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80',
+    description: 'Medical-grade anti-bacterial hygiene maintenance, ward sanitization, and sterile hospital housekeeping.'
   },
   {
     id: 'hk-3',
-    title: 'Restroom Sanitization',
-    category: 'Housekeeping',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
-    description: 'Hospitality-grade washroom hygiene maintenance and anti-microbial disinfection.'
-  },
-  {
-    id: 'hk-4',
-    title: 'Eco-friendly Chemicals',
-    category: 'Housekeeping',
-    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80',
-    description: 'Non-toxic, bio-degradable cleaning agents protecting indoor air quality and employee health.'
-  },
-
-  // 03. CLEANING & STAFFING SERVICES
-  {
-    id: 'cs-1',
-    title: 'Pantry & Hospitality Attendants',
-    category: 'Cleaning & Staffing',
-    image: 'https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=800&q=80',
-    description: 'Professional pantry stewards handling executive refreshment service and kitchen upkeep.'
-  },
-  {
-    id: 'cs-2',
-    title: 'Front Desk Receptionists',
-    category: 'Cleaning & Staffing',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
-    description: 'Courteous front-office reception staff managing visitor welcome, call routing, and mail handling.'
-  },
-  {
-    id: 'cs-3',
-    title: 'Office Helpers',
-    category: 'Cleaning & Staffing',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
-    description: 'Deputed office boys facilitating meeting room setups, file movements, and errand assistance.'
-  },
-  {
-    id: 'cs-4',
-    title: 'Document Management',
-    category: 'Cleaning & Staffing',
-    image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=800&q=80',
-    description: 'Systematic physical file indexing, record dispatching, and confidential paper shredding.'
-  },
-
-  // 04. DETECTIVE AGENCY & RISK MANAGEMENT
-  {
-    id: 'det-1',
-    title: 'Employee Background Check',
-    category: 'Detective Agency',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-    description: 'Comprehensive employment history, education, and criminal record verification.'
-  },
-  {
-    id: 'det-2',
-    title: 'Corporate Asset Audit',
-    category: 'Detective Agency',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-    description: 'Investigative asset tracking, inventory leakage audit, and intellectual property protection.'
-  },
-  {
-    id: 'det-3',
-    title: 'Discreet Surveillance',
-    category: 'Detective Agency',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
-    description: 'Low-profile field observation, undercover intelligence gathering, and video logging.'
-  },
-  {
-    id: 'det-4',
-    title: 'Risk Mitigations',
-    category: 'Detective Agency',
-    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80',
-    description: 'Executive threat assessment, security vulnerability audit, and fraud prevention strategies.'
+    title: 'Schools Cleaning Maintenance',
+    category: 'Housekeeping Services',
+    image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80',
+    description: 'Campus facility housekeeping, classroom sanitation, restroom hygiene, and playground maintenance.'
   }
 ];
 
 const SERVICE_SECTIONS = [
   {
-    category: 'Security',
-    title: '01. PROFESSIONAL SECURITY SERVICES',
-    description: '4 Key Security & Surveillance Operational Deployments'
+    category: 'Cleaning Services',
+    title: '01. PROFESSIONAL CLEANING SERVICES',
+    description: '8 Specialized Cleaning Solutions for Homes, Offices & Commercial Establishments'
   },
   {
-    category: 'Housekeeping',
-    title: '02. HOSPITALITY HOUSEKEEPING',
-    description: '4 Core Janitorial & Hygiene Maintenance Operations'
-  },
-  {
-    category: 'Cleaning & Staffing',
-    title: '03. CORPORATE OFFICE STAFFING',
-    description: '4 Dedicated Manpower & Administrative Support Solutions'
-  },
-  {
-    category: 'Detective Agency',
-    title: '04. DETECTIVE & RISK MANAGEMENT AGENCY',
-    description: '4 Corporate Intelligence & Background Verification Operations'
+    category: 'Housekeeping Services',
+    title: '02. HOUSEKEEPING & FACILITY MAINTENANCE',
+    description: '3 Dedicated Housekeeping Programs for Commercial Buildings, Hospitals & Schools'
   }
 ];
 
@@ -158,7 +109,7 @@ const Gallery: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('All');
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
 
-  const categories = ['All', 'Security', 'Housekeeping', 'Cleaning & Staffing', 'Detective Agency'];
+  const categories = ['All', 'Cleaning Services', 'Housekeeping Services'];
 
   const visibleSections = activeTab === 'All'
     ? SERVICE_SECTIONS
@@ -206,11 +157,11 @@ const Gallery: React.FC = () => {
               marginBottom: '1rem'
             }}
           >
-            4 MAIN SERVICES <span style={{ color: 'var(--brand-blue)' }}>OPERATIONAL SHOWCASE</span>
+            CLEANING & HOUSEKEEPING <span style={{ color: 'var(--brand-blue)' }}>SHOWCASE</span>
           </h1>
 
           <p style={{ maxWidth: '850px', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700 }}>
-            Visual proof of our 4 main service pillars in action across 12,000+ satisfied clients. Explore operations under Professional Security, Hospitality Housekeeping, Corporate Staffing, and Detective Agency.
+            Visual proof of our specialized cleaning and housekeeping operations in action. Explore our 8 cleaning services and 3 housekeeping maintenance divisions.
           </p>
         </div>
 
@@ -249,7 +200,7 @@ const Gallery: React.FC = () => {
           })}
         </div>
 
-        {/* Render 4 Main Service Sections */}
+        {/* Render Main Service Sections */}
         {visibleSections.map(sec => {
           const sectionItems = GALLERY_DATA.filter(item => item.category === sec.category);
 
@@ -294,11 +245,11 @@ const Gallery: React.FC = () => {
                     fontWeight: 800
                   }}
                 >
-                  4 SERVICES
+                  {sectionItems.length} SERVICES
                 </div>
               </div>
 
-              {/* 4 Cards Grid */}
+              {/* Cards Grid */}
               <div 
                 style={{
                   display: 'grid',

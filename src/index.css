@@ -5,16 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Syne:wght@700;800&display=swap');
 
 :root {
-  /* Color Palette - Mango Yellow Background & Bold Dark Blue Typography */
-  --bg-deep: #FFC107;                  /* Rich Mango Yellow Canvas */
-  --bg-panel: #FFA000;                 /* Deep Mango Panel */
-  --bg-card: #FFF8E7;                  /* Cream Mango High-Contrast Card */
+  /* Color Palette - Lighter Vibrant Yellow Background & Bold Dark Blue Typography */
+  --bg-deep: #FFDE59;                  /* Slightly Lighter Bright Yellow Canvas */
+  --bg-panel: #FFD54F;                 /* Warm Yellow Panel */
+  --bg-card: #FFFFF0;                  /* Soft Warm Cream High-Contrast Card */
   --text-primary: #001D4A;             /* Bold Deep Dark Blue */
   --text-muted: #0D3B66;               /* Dark Blue Secondary */
   
   /* Saturated Brand Accent Colors */
-  --brand-yellow: #FFCA28;  
-  --brand-yellow-glow: rgba(255, 202, 40, 0.4);
+  --brand-yellow: #FFF176;  
+  --brand-yellow-glow: rgba(255, 241, 118, 0.4);
 
   /* Deep Corporate Dark Blue */
   --brand-blue: #001D4A;

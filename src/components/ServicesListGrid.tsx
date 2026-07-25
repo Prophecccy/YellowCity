@@ -14,44 +14,37 @@ export interface ServiceItem {
 
 export const ALL_SERVICES: ServiceItem[] = [
   {
-    id: 'security-services',
+    id: 'cleaning-services',
     number: '01',
-    title: 'Professional Security Services',
-    category: 'Protection & Surveillance',
-    description: 'Vetted, uniformed security officers, gate control experts, and automated surveillance teams protecting commercial complexes and residential communities.',
-    icon: '🛡️',
-    image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80',
-    features: ['Armed & Unarmed Guarding', '24/7 Access Control', 'CCTV Monitoring', 'Visitor Log Management']
+    title: 'Professional Cleaning Services',
+    category: 'Cleaning Division',
+    description: 'Comprehensive specialized cleaning solutions covering residential homes, corporate offices, industrial floors, water storage tanks, high-rise glass, tiles & marble restoration, and exterior name boards.',
+    icon: '✨',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
+    features: [
+      'Home cleaning',
+      'Office cleaning',
+      'Floor Cleaning',
+      'Commercial place cleaning',
+      'Water tank cleaning',
+      'Glass cleaning',
+      'Tiles & Marbles & mosaic cleaning',
+      'Name board cleaning'
+    ]
   },
   {
     id: 'housekeeping-services',
     number: '02',
-    title: 'Hospitality Housekeeping',
-    category: 'Sanitation & Hygiene',
-    description: 'Hospitality-grade housekeeping staff delivering daily cleaning, floor care, hygiene maintenance, and continuous facility upkeep.',
+    title: 'Housekeeping & Facility Maintenance',
+    category: 'Housekeeping Division',
+    description: 'Full-time operational housekeeping staff and continuous facility upkeep customized for commercial complexes, healthcare hospitals, and educational institutions.',
     icon: '🧹',
-    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
-    features: ['Daily Janitorial Care', 'Floor Scrubbing & Polishing', 'Restroom Sanitization', 'Eco-friendly Chemicals']
-  },
-  {
-    id: 'corporate-staffing',
-    number: '03',
-    title: 'Corporate Office Staffing',
-    category: 'Manpower Solutions',
-    description: 'Deputing office boys, reception attendants, pantry managers, and administrative support personnel to streamline daily office operations.',
-    icon: '👔',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
-    features: ['Pantry & Hospitality Attendants', 'Front Desk Receptionists', 'Office Helpers', 'Document Management']
-  },
-  {
-    id: 'private-investigations',
-    number: '04',
-    title: 'Corporate Investigation & Risk Management',
-    category: 'Corporate Intelligence',
-    description: 'Confidential background verification, corporate asset surveillance, fraud prevention, and discreet risk assessment services.',
-    icon: '🔍',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-    features: ['Employee Background Check', 'Corporate Asset Audit', 'Discreet Surveillance', 'Risk Mitigations']
+    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80',
+    features: [
+      'Commercial place Maintenance',
+      'Hospitals cleaning maintenance',
+      'Schools cleaning maintenance'
+    ]
   }
 ];
 
@@ -89,7 +82,7 @@ const ServicesListGrid: React.FC<ServicesListGridProps> = ({ onSelectService }) 
               width: 'fit-content'
             }}
           >
-            <span className="font-technical" style={{ color: '#FFD54F', fontWeight: 800 }}>CORE SERVICE DIRECTORY</span>
+            <span className="font-technical" style={{ color: '#FFD54F', fontWeight: 800 }}>SPECIALIZED CLEANING & HOUSEKEEPING DIRECTORY</span>
           </div>
 
           <h2 
@@ -101,12 +94,12 @@ const ServicesListGrid: React.FC<ServicesListGridProps> = ({ onSelectService }) 
               margin: 0
             }}
           >
-            OUR 4 MAIN SERVICES <br />
+            CLEANING & HOUSEKEEPING SOLUTIONS <br />
             <span style={{ color: 'var(--brand-blue)' }}>YELLOW CITY PRIVATE LIMITED</span>
           </h2>
 
-          <p style={{ maxWidth: '750px', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700 }}>
-            Right on our home portal: Explore our 4 core integrated facility management service pillars. Every service is backed by trained personnel, rigorous quality control, and 12,000+ satisfied clients.
+          <p style={{ maxWidth: '850px', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700 }}>
+            Dedicated cleaning and housekeeping services tailored for commercial establishments, homes, offices, hospitals, and schools. Powered by trained personnel and anti-bacterial equipment.
           </p>
         </div>
 

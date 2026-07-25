@@ -129,7 +129,7 @@ const Hero = () => {
                     fontWeight: 900
                   }}
                 >
-                  VIGILANT. <span className="font-serif-italic" style={{ color: 'var(--brand-blue)', fontWeight: 900 }}>pristine.</span> TRUSTED.
+                  PRISTINE. <span className="font-serif-italic" style={{ color: 'var(--brand-blue)', fontWeight: 900 }}>hygienic.</span> TRUSTED.
                 </motion.h1>
               </div>
             </div>
@@ -146,7 +146,7 @@ const Hero = () => {
                 lineHeight: '1.5'
               }}
             >
-              South India's premier Facility Management corporation. Delivering hospitality-grade security, professional housekeeping, deep sanitation, and corporate staffing for over 12,000+ satisfied commercial and residential clients.
+              Premier Housekeeping & Specialized Cleaning Corporation. Delivering hospital-grade cleaning, office maintenance, home deep cleaning, water tank sanitization, and school facility housekeeping for over 12,000+ satisfied clients.
             </motion.p>
 
             {/* Interactive CTAs - Rounded Pills */}

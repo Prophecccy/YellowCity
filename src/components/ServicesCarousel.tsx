@@ -25,51 +25,27 @@ const ServicesCarousel: React.FC = () => {
   const services: ServiceSlide[] = [
     {
       num: '01',
-      title: 'Security Services',
-      description: 'High-fidelity armed guarding, static security deployments, event protection, access control protocols, and executive transit intelligence. Built on compliance and rapid response command centers.',
-      specs: 'Security Division',
+      title: 'Cleaning Services',
+      description: 'Professional cleaning solutions for homes, corporate offices, commercial places, water storage tanks, glass facades, tiles, marbles, mosaic floors, and name boards.',
+      specs: 'Specialized Cleaning Division',
       bullets: [
-        'Tactical physical defense & armed units',
-        '24/7 command room route-tracking dispatch',
-        'Corporate estate asset monitoring & response'
-      ],
-      image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      num: '02',
-      title: 'Housekeeping Services',
-      description: 'Handcrafted corporate facility hospitality, workspace housekeeping, pantry hostess staff management, guest house operational coordination, and corporate concierge units.',
-      specs: 'Premium Housekeeping',
-      bullets: [
-        'Corporate workspace management & setups',
-        'Professional pantry hostess & stewards styling',
-        'Guesthouse operations & executive cleaning'
+        'Home, Office & Commercial Cleaning',
+        'Water Tank & High-Rise Glass Washing',
+        'Tiles, Marbles & Mosaic Scrubbing & Polishing'
       ],
       image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80'
     },
     {
-      num: '03',
-      title: 'Cleaning Services',
-      description: 'Industrial-grade deep sanitization, high-rise facade window restoration, carpet/upholstery crystallization, marble diamond polishing, and technical clean room maintenance.',
-      specs: 'Sanitation & Deep Cleaning',
+      num: '02',
+      title: 'Housekeeping Services',
+      description: 'Dedicated operational housekeeping staff and continuous facility upkeep customized for commercial complexes, healthcare hospitals, and educational institutions.',
+      specs: 'Housekeeping & Facility Division',
       bullets: [
-        'Heavy industrial deep cleaning & restoration',
-        'Marble crystallization & diamond pad buffing',
-        'Structural facade glass & high-rise cleaning'
+        'Commercial Place Cleaning & Maintenance',
+        'Hospital Hygiene & Sanitization Maintenance',
+        'School Campus Facility Maintenance'
       ],
       image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      num: '04',
-      title: 'Detective Agency',
-      description: 'Elite corporate espionage prevention, background intelligence audits, asset tracing, matrimonial verification, active field surveillance, and fraud investigations.',
-      specs: 'Private Investigations',
-      bullets: [
-        'Vendor audits & pre-employment tracing',
-        'High-fidelity surveillance & photography logs',
-        'Asset searches, theft reviews & court evidence'
-      ],
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'
     }
   ];
 
